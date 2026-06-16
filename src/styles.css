@@ -1598,3 +1598,884 @@ body,
 .modal-backdrop {
   background: rgba(0, 0, 0, 0.38);
 }
+
+/* Minimal notebook phone theme */
+:root {
+  color: #111;
+  background: #fff;
+  --plum: #111;
+  --plum-deep: #111;
+  --rose: #111;
+  --rose-dark: #111;
+  --blush: #fff;
+  --cream: #fff;
+  --ink: #111;
+  --muted: rgba(17, 17, 17, 0.6);
+  --line: #111;
+  --paper: #fff;
+  --paper-deep: #fff;
+  --sketch: #111;
+  --marker-pink: #fff;
+  --marker-yellow: #fff;
+  --marker-blue: #111;
+  --marker-green: #fff;
+  --marker-lilac: #fff;
+  --white: #fff;
+  --shadow: none;
+}
+
+html,
+body,
+.app-shell,
+.main {
+  background: #fff;
+}
+
+body {
+  color: #111;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: block;
+}
+
+.sidebar {
+  display: none !important;
+}
+
+.main {
+  width: min(100%, 430px) !important;
+  min-height: 100vh;
+  margin: 0 auto !important;
+  padding-bottom: 140px;
+  position: relative;
+}
+
+.content {
+  max-width: none;
+  margin: 0;
+  padding: 18px 24px 0;
+}
+
+.mobile-header {
+  display: block !important;
+  position: relative;
+  padding: 24px 24px 6px;
+  background: #fff;
+  border: 0;
+  height: auto;
+}
+
+.mobile-header::before {
+  content: "9:33";
+  display: block;
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #111;
+  margin-bottom: 26px;
+}
+
+.brand {
+  align-items: flex-start;
+  gap: 0;
+}
+
+.brand-mark {
+  display: none;
+}
+
+.brand strong {
+  position: relative;
+  display: block;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+.brand strong::after {
+  content: "dateum.";
+  color: #111;
+  font: 700 42px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  display: block;
+}
+
+.brand span {
+  display: none;
+}
+
+.mobile-actions {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mobile-actions::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 2px solid #111;
+  border-radius: 9px 9px 9px 3px;
+  display: block;
+}
+
+.mobile-actions::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: #111;
+  border-radius: 50%;
+  display: block;
+}
+
+.mobile-actions button,
+.icon-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111;
+}
+
+.mobile-actions button svg,
+.icon-button svg {
+  stroke-width: 1.9;
+}
+
+.mobile-title,
+.notification-dot,
+.new-badge,
+.desktop-only {
+  display: none !important;
+}
+
+.page-header {
+  display: block;
+  margin: 8px 0 0;
+}
+
+.eyebrow {
+  display: none;
+}
+
+.page-header h1 {
+  margin: 0;
+  font: 700 16px/1.1 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.45);
+}
+
+.page-header h1 em {
+  color: inherit;
+  font-style: normal;
+}
+
+.page-header p {
+  margin: 8px 0 0;
+  max-width: 250px;
+  font: 400 14px/1.4 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.page-header .primary-button {
+  display: none;
+}
+
+.hero-card,
+.card,
+.todo-summary,
+.footprint-preview,
+.memory-card,
+.new-memory-card,
+.date-list-card,
+.course-detail-hero,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.course-note-card,
+.map-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.couple-hero,
+.setting-card,
+.modal {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.hero-card::after,
+.course-detail-hero::after,
+.hero-copy::after,
+.course-detail-heading::after,
+.memory-art::after,
+.floating-note,
+.date-ticket,
+.flower,
+.mini-map {
+  display: none !important;
+}
+
+.hero-card {
+  min-height: 52vh;
+  margin: 0 0 44px;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-copy {
+  padding: 0;
+  width: 100%;
+}
+
+.soft-label {
+  display: inline-flex;
+  margin-bottom: 18px;
+  font: 400 13px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  letter-spacing: 0;
+  color: rgba(17, 17, 17, 0.55);
+}
+
+.hero-copy h2,
+.section-title h3,
+.date-list-copy h3,
+.course-detail-heading h1,
+.detail-section-title h2,
+.course-info-card h3,
+.course-todo-card h3,
+.couple-hero h2,
+.modal-header h2,
+.district-title strong {
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  color: #111;
+}
+
+.hero-copy h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.hero-date,
+.course-detail-heading > p,
+.date-meta,
+.memory-copy time,
+.todo-row time,
+.page-header p,
+.course-info-card dt,
+.course-info-card dd,
+.schedule-time,
+.schedule-place-top span,
+.schedule-place-top > small,
+.place-address,
+.place-note,
+.course-empty-copy,
+.district-title small,
+.district-history small,
+.national-footprints-heading p {
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.62);
+}
+
+.route {
+  margin: 18px 0 0;
+  gap: 10px;
+}
+
+.route-stop {
+  min-height: auto;
+  gap: 10px;
+}
+
+.route-stop span {
+  width: 22px;
+  height: 22px;
+  border: 1.8px solid #111;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  box-shadow: none;
+  font: 700 12px/1 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.route-stop:not(:last-child)::after,
+.schedule-marker::after {
+  background: #111;
+  opacity: 0.2;
+}
+
+.route-stop p {
+  margin: 0;
+  font: 400 18px/1.35 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+}
+
+.text-button,
+.section-title button,
+.inline-link,
+.date-detail-button,
+.back-button,
+.district-empty button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #111;
+  box-shadow: none;
+  font: 400 16px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.dashboard-grid,
+.memory-grid,
+.settings-grid,
+.course-detail-layout,
+.course-side-panel,
+.footprint-layout {
+  grid-template-columns: 1fr;
+  gap: 42px;
+}
+
+.todo-preview,
+.footprint-preview,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.map-card,
+.full-todo-card {
+  padding: 0;
+}
+
+.section-title {
+  margin-bottom: 16px;
+}
+
+.section-title h3 {
+  font-size: 20px;
+}
+
+.section-title p,
+.todo-content > span,
+.footprint-copy p,
+.memory-copy p,
+.summary-copy p,
+.district-empty p {
+  font: 400 14px/1.45 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.todo-row {
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 0;
+}
+
+.check-button {
+  width: 24px;
+  height: 24px;
+  border: 1.8px solid #111;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.completed .check-button {
+  background: #111;
+  border-color: #111;
+}
+
+.todo-content strong {
+  font: 400 20px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+  white-space: normal;
+}
+
+.assignee,
+.assignee.pink,
+.status,
+.detail-title-actions > strong,
+.course-detail-status,
+.place-chips span {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(17, 17, 17, 0.55);
+  font: 400 13px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.add-row-button,
+.course-empty-route button,
+.primary-button,
+.secondary-button,
+.province-grid button,
+.new-memory-card,
+.setting-card {
+  min-height: 64px;
+  padding: 14px 18px;
+  border: 2px solid #111 !important;
+  border-radius: 34px !important;
+  background: #fff !important;
+  color: #111 !important;
+  box-shadow: none !important;
+  font: 400 18px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.memory-grid {
+  gap: 26px;
+}
+
+.memory-card {
+  min-height: 0;
+  padding: 0;
+}
+
+.memory-art {
+  display: none;
+}
+
+.memory-copy {
+  padding: 0;
+}
+
+.memory-copy h4 {
+  margin: 4px 0 6px;
+  font: 700 22px/1.15 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+}
+
+.date-list {
+  gap: 24px;
+}
+
+.date-list-card {
+  display: block;
+  padding: 0;
+}
+
+.date-icon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 12px;
+  border: 2px solid #111;
+  border-radius: 18px;
+  font-size: 24px;
+}
+
+.date-list-copy {
+  min-width: 0;
+}
+
+.date-meta {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.date-list-copy h3 {
+  margin: 8px 0;
+  font-size: 26px;
+}
+
+.date-list-copy > p {
+  margin: 10px 0 0;
+  font: 400 16px/1.45 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.75);
+}
+
+.course-detail-page {
+  padding-top: 8px;
+}
+
+.back-button {
+  margin-bottom: 22px;
+}
+
+.course-detail-hero {
+  min-height: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.course-detail-heading h1 {
+  margin: 8px 0;
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+.course-detail-art {
+  display: none;
+}
+
+.detail-section-title {
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.detail-title-actions > button {
+  min-height: 38px;
+  padding: 8px 16px;
+  border: 2px solid #111;
+  border-radius: 26px;
+  background: #fff;
+  color: #111;
+  font: 400 16px/1 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.schedule-item {
+  grid-template-columns: 42px 24px 1fr;
+  gap: 10px;
+}
+
+.schedule-marker span {
+  width: 22px;
+  height: 22px;
+  border: 1.8px solid #111;
+  background: #fff;
+  color: #111;
+  box-shadow: none;
+  font: 700 12px/1 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.schedule-place {
+  margin-bottom: 18px;
+  padding: 0 0 18px 4px;
+  border-bottom: 0;
+}
+
+.schedule-place-top h3 {
+  margin: 4px 0 0;
+  font: 700 22px/1.15 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+}
+
+.course-note-card {
+  padding: 0;
+  gap: 10px;
+}
+
+.course-note-card strong,
+.summary-copy strong,
+.selected-district h4,
+.top-districts h4,
+.national-footprints-heading h2,
+.couple-hero h2 {
+  font: 700 22px/1.1 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+}
+
+.todo-summary {
+  padding: 0;
+  display: block;
+}
+
+.summary-copy strong {
+  font-size: 42px;
+  margin: 0;
+}
+
+.progress-ring,
+.heart-line,
+.mini-map,
+.map-legend,
+.map-hint {
+  display: none;
+}
+
+.map-toolbar {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.segmented-control,
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 0;
+  background: transparent;
+}
+
+.filter-tabs button,
+.segmented-control button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(17, 17, 17, 0.56);
+  font: 400 16px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+  box-shadow: none;
+}
+
+.filter-tabs button.active,
+.segmented-control button.active {
+  color: #111;
+}
+
+.conquest-card {
+  padding: 0;
+}
+
+.conquest-card > span,
+.selected-label,
+.national-footprints-heading span,
+.detail-card-label,
+.detail-section-title span {
+  font: 400 13px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  letter-spacing: 0;
+  color: rgba(17, 17, 17, 0.45);
+}
+
+.conquest-card strong,
+.national-footprints-heading strong {
+  display: block;
+  margin: 8px 0;
+  font: 700 32px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111;
+}
+
+.conquest-card .bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.12);
+}
+
+.conquest-card .bar i {
+  background: #111;
+}
+
+.district-title,
+.national-footprints-heading {
+  margin: 0 0 18px;
+}
+
+.district-title > div,
+.top-districts button > span,
+.setting-card > span,
+.new-memory-card span {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+}
+
+.district-history,
+.top-districts {
+  gap: 14px;
+}
+
+.district-history > div,
+.top-districts button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.province-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.province-grid button.visited {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.couple-hero {
+  padding: 0;
+  text-align: left;
+}
+
+.large-avatar {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #111;
+  font: 700 18px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111 !important;
+  background: #fff !important;
+  box-shadow: none;
+}
+
+.settings-grid {
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.setting-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.setting-card strong {
+  display: block;
+  font: 700 20px/1.1 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.setting-card small {
+  display: block;
+  margin-top: 4px;
+  font: 400 14px/1.35 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.modal-backdrop {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  width: 100%;
+  max-height: calc(100vh - 36px);
+  padding: 0;
+}
+
+.modal-header,
+.modal-body,
+.modal-actions {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.modal-header {
+  padding-top: 22px;
+  padding-bottom: 14px;
+  border-bottom: 0;
+}
+
+.modal-header p,
+.modal-body label,
+.duration-spinner legend {
+  font: 400 14px/1.35 "Gaegu", "Noto Sans KR", sans-serif;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.modal-header button {
+  min-height: 34px;
+  width: 34px;
+  border: 2px solid #111 !important;
+  border-radius: 50% !important;
+}
+
+.modal-body {
+  gap: 14px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea,
+.duration-spinner input {
+  border: 2px solid #111 !important;
+  border-radius: 18px !important;
+  padding: 12px 14px;
+  background: #fff !important;
+  font: 400 16px/1.25 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #111 !important;
+  box-shadow: none !important;
+}
+
+.modal-actions {
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 10px;
+  padding-bottom: 24px;
+}
+
+.modal-actions .secondary-button,
+.modal-actions .primary-button {
+  flex: 1;
+}
+
+.toast {
+  left: 50%;
+  right: auto;
+  bottom: 112px;
+  transform: translateX(-50%);
+  min-width: 220px;
+  justify-content: center;
+  padding: 10px 16px;
+  border: 2px solid #111;
+  border-radius: 22px;
+  background: #fff;
+  color: #111;
+  font: 400 16px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.toast svg {
+  width: 16px;
+  height: 16px;
+}
+
+.mobile-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  width: min(100%, 430px);
+  height: 120px;
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+  padding: 0 14px max(12px, env(safe-area-inset-bottom));
+  background: transparent;
+  border: 0;
+  z-index: 40;
+}
+
+.mobile-nav button {
+  min-width: 0;
+  height: 60px;
+  border: 0;
+  background: transparent;
+  color: rgba(17, 17, 17, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font: 400 14px/1 "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.mobile-nav button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.mobile-nav button.active {
+  width: 84px;
+  height: 132px;
+  margin: 0 auto 6px;
+  border: 2px solid #111;
+  border-radius: 42px;
+  background: #fff;
+  color: #111;
+  transform: translateY(-12px);
+}
+
+.mobile-nav button.active span {
+  max-width: 54px;
+  text-align: center;
+  line-height: 0.95;
+}
+
+@media (min-width: 760px) {
+  .main {
+    box-shadow: none;
+  }
+}

@@ -65,6 +65,15 @@ function App() {
   const [visits, setVisits] = usePersistedState("dateum-visits", initialVisits);
   const [modal, setModal] = useState(null);
   const [toast, setToast] = useState("");
+  const [clock, setClock] = useState(() => formatClock(new Date()));
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setClock(formatClock(new Date()));
+    }, 60000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const notify = (message) => {
     setToast(message);
@@ -186,7 +195,7 @@ function App() {
       </aside>
 
       <main className="main">
-        <MobileHeader activeTab={activeTab} />
+        <MobileHeader activeTab={activeTab} clock={clock} />
         <div className="content">
           {selectedCourse ? (
             <CourseDetailPage
@@ -1148,6 +1157,14 @@ function PlaceModal({ onClose, onAdd }) {
 function formatDate(value) {
   const [, month, day] = value.split("-");
   return `${Number(month)}/${Number(day)}`;
+}
+
+function formatClock(value) {
+  return new Intl.DateTimeFormat("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: false,
+  }).format(value);
 }
 
 export default App;
