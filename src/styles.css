@@ -1811,6 +1811,28 @@ body {
   border-radius: 0 !important;
 }
 
+.card,
+.todo-summary,
+.footprint-preview,
+.memory-card,
+.new-memory-card,
+.date-list-card,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.course-note-card,
+.map-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.couple-hero,
+.setting-card,
+.modal {
+  background: #fff !important;
+  border: 2px solid #111 !important;
+  border-radius: 26px !important;
+}
+
 .hero-card::after,
 .course-detail-hero::after,
 .hero-copy::after,
@@ -1954,7 +1976,15 @@ body {
 .national-footprints,
 .map-card,
 .full-todo-card {
-  padding: 0;
+  padding: 18px;
+}
+
+.memory-card,
+.date-list-card,
+.course-note-card,
+.couple-hero,
+.setting-card {
+  padding: 18px;
 }
 
 .section-title {
@@ -2439,7 +2469,7 @@ body {
 
 .mobile-nav button {
   min-width: 0;
-  height: 60px;
+  height: 56px;
   border: 0;
   background: transparent;
   color: rgba(17, 17, 17, 0.72);
@@ -2447,29 +2477,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font: 400 14px/1 "Gaegu", "Noto Sans KR", sans-serif;
+  gap: 6px;
+  font: 400 13px/1 "Gaegu", "Noto Sans KR", sans-serif;
 }
 
 .mobile-nav button svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   stroke-width: 1.8;
 }
 
 .mobile-nav button.active {
-  width: 84px;
-  height: 132px;
-  margin: 0 auto 6px;
+  width: 72px;
+  height: 112px;
+  margin: 0 auto 4px;
   border: 2px solid #111;
-  border-radius: 42px;
+  border-radius: 36px;
   background: #fff;
   color: #111;
-  transform: translateY(-12px);
+  transform: translateY(-8px);
+}
+
+.mobile-nav button.active svg {
+  width: 15px;
+  height: 15px;
 }
 
 .mobile-nav button.active span {
-  max-width: 54px;
+  max-width: 48px;
   text-align: center;
   line-height: 0.95;
 }
