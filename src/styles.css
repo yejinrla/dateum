@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
 
 :root {
   font-family: "Noto Sans KR", sans-serif;
@@ -771,4 +771,558 @@ textarea:focus-visible {
 
 .modal-backdrop {
   background: rgba(20, 20, 20, 0.42);
+}
+
+/* Hand-drawn illustrated theme */
+:root {
+  color: #372b23;
+  background: #fff7df;
+  --plum: #3d3128;
+  --plum-deep: #221a15;
+  --rose: #f27b8d;
+  --rose-dark: #d75d74;
+  --blush: #ffe2e0;
+  --cream: #fff8e8;
+  --ink: #372b23;
+  --muted: #8a7668;
+  --line: #3b2b22;
+  --paper: #fff9e8;
+  --paper-deep: #f7edcf;
+  --sketch: #31251d;
+  --marker-pink: #ffb4c1;
+  --marker-yellow: #ffe69a;
+  --marker-blue: #b9dcff;
+  --marker-green: #c8e9b1;
+  --marker-lilac: #dbc7ff;
+  --white: #fffdf5;
+  --shadow: 6px 7px 0 rgba(49, 37, 29, 0.2);
+}
+
+body,
+.main {
+  background:
+    radial-gradient(circle at 18px 22px, rgba(49, 37, 29, 0.05) 0 1.3px, transparent 1.4px),
+    linear-gradient(90deg, rgba(49, 37, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(49, 37, 29, 0.035) 1px, transparent 1px),
+    #fff7df;
+  background-size: 34px 34px, 28px 28px, 28px 28px, auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+}
+
+.brand strong,
+.page-header h1,
+.hero-copy h2,
+.section-title h3,
+.date-list-copy h3,
+.course-detail-heading h1,
+.detail-section-title h2,
+.modal-header h2,
+.couple-hero h2,
+.district-title strong,
+.summary-copy strong,
+.date-ticket strong {
+  font-family: "Gaegu", "DM Serif Display", "Noto Sans KR", cursive;
+  letter-spacing: 0.01em;
+}
+
+.sidebar,
+.mobile-header,
+.mobile-nav,
+.card,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.map-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.date-list-card,
+.memory-card,
+.new-memory-card,
+.modal,
+.todo-summary,
+.couple-hero,
+.footprint-preview,
+.conquest-card,
+.hero-card,
+.course-detail-hero {
+  border: 2px solid var(--sketch);
+  background-color: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.sidebar,
+.mobile-header,
+.mobile-nav {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 246, 219, 0.88)),
+    var(--paper);
+}
+
+.card,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.map-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.modal {
+  background:
+    radial-gradient(circle at 24px 18px, rgba(255, 255, 255, 0.8) 0 4px, transparent 5px),
+    linear-gradient(145deg, #fffdf2, #fff3d7);
+  border-radius: 23px 19px 26px 18px;
+}
+
+.hero-card,
+.course-detail-hero,
+.todo-summary,
+.couple-hero,
+.footprint-preview,
+.conquest-card {
+  background:
+    radial-gradient(circle at 14% 24%, rgba(255, 180, 193, 0.62), transparent 24%),
+    radial-gradient(circle at 88% 16%, rgba(185, 220, 255, 0.58), transparent 22%),
+    radial-gradient(circle at 74% 82%, rgba(255, 230, 154, 0.72), transparent 24%),
+    linear-gradient(135deg, #fffaf0, #ffeac6);
+  border-radius: 28px 21px 32px 23px;
+}
+
+.hero-card::after,
+.course-detail-hero::after {
+  width: 240px;
+  height: 160px;
+  border: 3px solid rgba(49, 37, 29, 0.22);
+  background: transparent;
+  border-radius: 52% 48% 54% 46%;
+  transform: rotate(-12deg);
+}
+
+.brand-mark,
+.primary-button,
+.detail-title-actions > button,
+.course-empty-route button,
+.completed .check-button,
+.province-grid button.visited,
+.toast {
+  color: #2c2119;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.42), transparent),
+    var(--marker-pink);
+  border: 2px solid var(--sketch);
+  box-shadow: 4px 5px 0 rgba(49, 37, 29, 0.22);
+}
+
+.brand-mark {
+  transform: rotate(-3deg);
+  border-radius: 14px 18px 13px 8px;
+}
+
+.primary-button:hover {
+  background: #ff9aad;
+  transform: translate(-1px, -1px) rotate(-1deg);
+}
+
+.secondary-button,
+.add-row-button,
+.text-button,
+.section-title button,
+.date-detail-button,
+.filter-tabs button,
+.segmented-control button,
+.province-grid button {
+  border: 2px solid var(--sketch);
+  background: #fffdf2;
+  color: #392b21;
+  box-shadow: 3px 4px 0 rgba(49, 37, 29, 0.14);
+}
+
+.text-button,
+.section-title button {
+  padding: 7px 10px;
+  border-radius: 999px 850px 900px 780px;
+}
+
+.filter-tabs button.active,
+.segmented-control button.active,
+.nav-button.active {
+  color: #2c2119;
+  background: var(--marker-yellow);
+  border-color: var(--sketch);
+}
+
+.nav-button {
+  border: 2px solid transparent;
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+  font-size: 17px;
+}
+
+.nav-button:hover {
+  background: rgba(255, 230, 154, 0.42);
+  color: var(--sketch);
+  border-color: rgba(49, 37, 29, 0.18);
+}
+
+.nav-button.active::before {
+  left: -26px;
+  width: 7px;
+  height: 28px;
+  background: var(--marker-pink);
+  border: 2px solid var(--sketch);
+}
+
+.new-badge,
+.notification-dot {
+  background: var(--marker-blue);
+  color: var(--sketch);
+  border: 1px solid var(--sketch);
+}
+
+.couple-pill,
+.side-quote,
+.place-chips span,
+.course-empty-route,
+.place-note,
+.modal-header button,
+.modal-body input,
+.modal-body select,
+.modal-body textarea,
+.assignee,
+.assignee.pink,
+.course-note-card,
+.course-detail-status,
+.detail-title-actions > strong,
+.district-history > div,
+.district-title > div,
+.top-districts button > span {
+  background: rgba(255, 253, 242, 0.82);
+  border: 1.7px solid rgba(49, 37, 29, 0.72);
+  color: #403025;
+}
+
+.eyebrow,
+.soft-label,
+.soft-label.peach,
+.inline-link,
+.selected-label,
+.detail-section-title span,
+.detail-card-label,
+.national-footprints-heading span,
+.national-footprints-heading strong,
+.summary-copy > span,
+.summary-copy strong,
+.empty-state svg,
+.district-empty button,
+.mobile-nav button.active,
+.page-header h1 em {
+  color: #bf4e66;
+}
+
+.page-header h1,
+.hero-copy h2,
+.section-title h3,
+.date-list-copy h3,
+.course-detail-heading h1,
+.course-info-card h3,
+.course-todo-card h3,
+.detail-section-title h2,
+.modal-header h2,
+.couple-hero h2,
+.district-title strong,
+.brand strong {
+  color: #2b2119;
+}
+
+.avatar,
+.large-avatar {
+  border: 2px solid var(--sketch);
+  box-shadow: 2px 3px 0 rgba(49, 37, 29, 0.18);
+}
+
+.avatar-a,
+.large-avatar.pink {
+  background: var(--marker-pink);
+  color: #3a251f;
+}
+
+.avatar-b,
+.large-avatar.purple {
+  background: var(--marker-blue);
+  color: #253144;
+}
+
+.route-stop span,
+.schedule-marker span {
+  color: #2d2119;
+  background: var(--marker-yellow);
+  border: 2px solid var(--sketch);
+  box-shadow: 2px 3px 0 rgba(49, 37, 29, 0.15);
+}
+
+.route-stop:not(:last-child)::after,
+.schedule-marker::after {
+  left: 10px;
+  width: 2px;
+  background-image: linear-gradient(var(--sketch) 50%, transparent 0);
+  background-size: 2px 8px;
+  background-color: transparent;
+}
+
+.date-ticket,
+.floating-note {
+  border: 2px solid var(--sketch);
+  background: #fffdf2;
+  color: #33261d;
+  box-shadow: 5px 6px 0 rgba(49, 37, 29, 0.18);
+}
+
+.date-ticket {
+  border-radius: 7px 12px 8px 13px;
+  transform: rotate(4deg);
+}
+
+.date-ticket::before,
+.tape {
+  background: rgba(255, 230, 154, 0.78);
+  border: 1px solid rgba(49, 37, 29, 0.18);
+}
+
+.date-ticket strong {
+  color: #db5a73;
+}
+
+.floating-note {
+  background: #fff1a8;
+}
+
+.date-icon.mint,
+.course-detail-art.mint {
+  background: linear-gradient(145deg, #e4f8ca, #b9e49b);
+}
+
+.date-icon.butter,
+.course-detail-art.butter,
+.memory-card.butter .memory-art {
+  background: linear-gradient(145deg, #fff1aa, #ffd480);
+}
+
+.date-icon.lavender,
+.course-detail-art.lavender,
+.memory-card.lavender .memory-art {
+  background: linear-gradient(145deg, #e9d9ff, #cdb2ff);
+}
+
+.date-icon.rose,
+.course-detail-art.rose,
+.memory-card.rose .memory-art {
+  background: linear-gradient(145deg, #ffd6dc, #ff9bac);
+}
+
+.date-icon,
+.course-detail-art,
+.memory-art {
+  border: 2px solid var(--sketch);
+  box-shadow: 4px 5px 0 rgba(49, 37, 29, 0.14);
+}
+
+.date-icon,
+.memory-emoji,
+.course-detail-art > span,
+.district-history > div > span {
+  filter: saturate(1.05);
+}
+
+.memory-card:nth-child(odd),
+.date-list-card:nth-child(odd) {
+  transform: rotate(-0.35deg);
+}
+
+.memory-card:nth-child(even),
+.date-list-card:nth-child(even) {
+  transform: rotate(0.35deg);
+}
+
+.memory-card:hover,
+.date-list-card:hover,
+.card:hover,
+.setting-card:hover,
+.province-grid button:hover {
+  transform: translateY(-2px) rotate(-0.2deg);
+}
+
+.memory-art::after,
+.hero-copy::after,
+.course-detail-heading::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.memory-art::after {
+  inset: 12px;
+  border: 2px dashed rgba(49, 37, 29, 0.26);
+  border-radius: 44% 56% 48% 52%;
+}
+
+.hero-copy,
+.course-detail-heading,
+.memory-art {
+  position: relative;
+}
+
+.hero-copy::after,
+.course-detail-heading::after {
+  width: 84px;
+  height: 20px;
+  right: 26px;
+  bottom: 24px;
+  border-bottom: 3px solid rgba(191, 78, 102, 0.42);
+  border-radius: 50%;
+  transform: rotate(-6deg);
+}
+
+.status.upcoming,
+.status.done {
+  color: #30241c;
+  background: var(--marker-green);
+  border: 1.6px solid var(--sketch);
+}
+
+.check-button {
+  border: 2px solid var(--sketch);
+  background: #fffdf2;
+  box-shadow: 2px 3px 0 rgba(49, 37, 29, 0.14);
+}
+
+.progress-ring {
+  border: 2px solid var(--sketch);
+  background: conic-gradient(#ffb4c1 var(--progress), rgba(49, 37, 29, 0.12) 0);
+  box-shadow: 3px 4px 0 rgba(49, 37, 29, 0.14);
+}
+
+.progress-ring::after {
+  background: #fff8e8;
+  border: 1px solid rgba(49, 37, 29, 0.2);
+}
+
+.map-legend .level-0,
+.district.level-0 polygon {
+  background: #fff4cf;
+  fill: #fff4cf;
+}
+
+.map-legend .level-1,
+.mini-cell.level-1,
+.district.level-1 polygon {
+  background: #d9f0be;
+  fill: #d9f0be;
+}
+
+.map-legend .level-2,
+.mini-cell.level-2,
+.district.level-2 polygon {
+  background: #ffd38a;
+  fill: #ffd38a;
+}
+
+.map-legend .level-3,
+.mini-cell.level-3,
+.district.level-3 polygon {
+  background: #ff9bac;
+  fill: #ff9bac;
+}
+
+.district polygon {
+  stroke: var(--sketch);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.district.selected polygon {
+  stroke: #1e1611;
+  stroke-width: 5;
+  filter: drop-shadow(4px 4px 0 rgba(49, 37, 29, 0.16));
+}
+
+.district text {
+  fill: #372b23;
+  font-family: "Gaegu", "Noto Sans KR", sans-serif;
+  font-size: 13px;
+}
+
+.district.level-2 text,
+.district.level-3 text {
+  fill: #372b23;
+}
+
+.river {
+  fill: #bfe3ff;
+  stroke: rgba(49, 37, 29, 0.38);
+  stroke-width: 2;
+}
+
+.mini-cell {
+  border: 2px solid var(--sketch);
+  color: #372b23;
+  box-shadow: 2px 3px 0 rgba(49, 37, 29, 0.14);
+}
+
+.conquest-card .bar {
+  background: rgba(49, 37, 29, 0.14);
+  border: 1px solid var(--sketch);
+}
+
+.conquest-card .bar i {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff9bac,
+    #ff9bac 7px,
+    #ffe69a 7px,
+    #ffe69a 14px
+  );
+}
+
+.modal-backdrop {
+  background: rgba(60, 46, 34, 0.35);
+}
+
+.modal {
+  border-radius: 28px 21px 31px 19px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  box-shadow: inset 2px 2px 0 rgba(49, 37, 29, 0.05);
+}
+
+.setting-card {
+  border: 2px solid var(--sketch);
+  background: #fffdf2;
+  box-shadow: 4px 5px 0 rgba(49, 37, 29, 0.13);
+  border-radius: 18px 14px 19px 13px;
+}
+
+.setting-card > span,
+.new-memory-card span {
+  background: var(--marker-lilac);
+  color: #33261d;
+  border: 2px solid var(--sketch);
+}
+
+@media (max-width: 760px) {
+  .mobile-nav {
+    box-shadow: 0 -4px 0 rgba(49, 37, 29, 0.12);
+  }
+
+  .mobile-nav button {
+    font-family: "Gaegu", "Noto Sans KR", sans-serif;
+    font-size: 11px;
+  }
 }
