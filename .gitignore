@@ -1,0 +1,9 @@
+node_modules
+dist
+.netlify
+.vercel
+.codex-remote-attachments
+qa_render
+*.log
+DATEUM_서비스_기획서.docx
+build_dateum_plan.py
