@@ -1326,3 +1326,275 @@ textarea {
     font-size: 11px;
   }
 }
+
+/* Black-and-white sketch theme */
+:root {
+  color: #202020;
+  background: #f6f6f2;
+  --plum: #222;
+  --plum-deep: #111;
+  --rose: #1f1f1f;
+  --rose-dark: #111;
+  --blush: #ededeb;
+  --cream: #fbfbf7;
+  --ink: #202020;
+  --muted: #70706c;
+  --line: #222;
+  --paper: #fffefa;
+  --paper-deep: #eeeeea;
+  --sketch: #202020;
+  --marker-pink: #d9d9d4;
+  --marker-yellow: #efefea;
+  --marker-blue: #c7c7c2;
+  --marker-green: #e3e3df;
+  --marker-lilac: #d0d0cb;
+  --white: #fff;
+  --shadow: 6px 7px 0 rgba(0, 0, 0, 0.18);
+}
+
+body,
+.main {
+  background:
+    radial-gradient(circle at 18px 22px, rgba(0, 0, 0, 0.055) 0 1.3px, transparent 1.4px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    #f6f6f2;
+  background-size: 34px 34px, 28px 28px, 28px 28px, auto;
+}
+
+.hero-card,
+.course-detail-hero,
+.todo-summary,
+.couple-hero,
+.footprint-preview,
+.conquest-card {
+  background:
+    radial-gradient(circle at 14% 24%, rgba(0, 0, 0, 0.08), transparent 24%),
+    radial-gradient(circle at 88% 16%, rgba(0, 0, 0, 0.06), transparent 22%),
+    radial-gradient(circle at 74% 82%, rgba(0, 0, 0, 0.1), transparent 24%),
+    linear-gradient(135deg, #fff, #ecece8);
+  color: #202020;
+}
+
+.card,
+.course-schedule-card,
+.course-info-card,
+.course-todo-card,
+.map-card,
+.selected-district,
+.top-districts,
+.national-footprints,
+.modal {
+  background:
+    radial-gradient(circle at 24px 18px, rgba(0, 0, 0, 0.045) 0 4px, transparent 5px),
+    linear-gradient(145deg, #fff, #f0f0ec);
+}
+
+.brand-mark,
+.primary-button,
+.detail-title-actions > button,
+.course-empty-route button,
+.completed .check-button,
+.province-grid button.visited,
+.toast {
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent),
+    #111;
+}
+
+.primary-button:hover {
+  background: #000;
+}
+
+.secondary-button,
+.add-row-button,
+.text-button,
+.section-title button,
+.date-detail-button,
+.filter-tabs button,
+.segmented-control button,
+.province-grid button,
+.couple-pill,
+.side-quote,
+.place-chips span,
+.course-empty-route,
+.place-note,
+.modal-header button,
+.modal-body input,
+.modal-body select,
+.modal-body textarea,
+.assignee,
+.assignee.pink,
+.course-note-card,
+.course-detail-status,
+.detail-title-actions > strong,
+.district-history > div,
+.district-title > div,
+.top-districts button > span,
+.setting-card,
+.new-memory-card {
+  background: #f7f7f4;
+  color: #202020;
+}
+
+.filter-tabs button.active,
+.segmented-control button.active,
+.nav-button.active,
+.status.upcoming,
+.status.done {
+  color: #111;
+  background: #dededa;
+}
+
+.eyebrow,
+.soft-label,
+.soft-label.peach,
+.inline-link,
+.selected-label,
+.detail-section-title span,
+.detail-card-label,
+.national-footprints-heading span,
+.national-footprints-heading strong,
+.summary-copy > span,
+.summary-copy strong,
+.empty-state svg,
+.district-empty button,
+.mobile-nav button.active,
+.page-header h1 em,
+.text-button,
+.section-title button {
+  color: #111;
+}
+
+.avatar-a,
+.large-avatar.pink,
+.avatar-b,
+.large-avatar.purple {
+  color: #fff;
+  background: #222;
+}
+
+.route-stop span,
+.schedule-marker span {
+  color: #111;
+  background: #efefea;
+}
+
+.hero-copy::after,
+.course-detail-heading::after {
+  border-bottom-color: rgba(0, 0, 0, 0.28);
+}
+
+.date-ticket,
+.floating-note {
+  background: #fff;
+  color: #202020;
+}
+
+.date-ticket::before,
+.tape {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.date-ticket strong {
+  color: #111;
+}
+
+.date-icon.mint,
+.date-icon.butter,
+.date-icon.lavender,
+.date-icon.rose,
+.course-detail-art.mint,
+.course-detail-art.butter,
+.course-detail-art.lavender,
+.course-detail-art.rose,
+.memory-card.butter .memory-art,
+.memory-card.lavender .memory-art,
+.memory-card.rose .memory-art {
+  background: linear-gradient(145deg, #f8f8f5, #cfcfca);
+}
+
+.date-icon,
+.memory-emoji,
+.course-detail-art > span,
+.district-history > div > span {
+  filter: grayscale(1) contrast(1.04);
+}
+
+.progress-ring {
+  background: conic-gradient(#111 var(--progress), rgba(0, 0, 0, 0.12) 0);
+}
+
+.progress-ring::after {
+  background: #f7f7f4;
+}
+
+.map-legend .level-0,
+.district.level-0 polygon {
+  background: #f5f5f1;
+  fill: #f5f5f1;
+}
+
+.map-legend .level-1,
+.mini-cell.level-1,
+.district.level-1 polygon {
+  background: #dcdcd7;
+  fill: #dcdcd7;
+}
+
+.map-legend .level-2,
+.mini-cell.level-2,
+.district.level-2 polygon {
+  background: #9a9a95;
+  fill: #9a9a95;
+}
+
+.map-legend .level-3,
+.mini-cell.level-3,
+.district.level-3 polygon {
+  background: #252525;
+  fill: #252525;
+}
+
+.district text,
+.district.level-2 text {
+  fill: #202020;
+}
+
+.district.level-3 text {
+  fill: #fff;
+}
+
+.river {
+  fill: #e5e5e1;
+  stroke: rgba(0, 0, 0, 0.36);
+}
+
+.mini-cell {
+  color: #202020;
+}
+
+.mini-cell.level-3 {
+  color: #fff;
+}
+
+.conquest-card .bar i {
+  background: repeating-linear-gradient(
+    -45deg,
+    #111,
+    #111 7px,
+    #bdbdb8 7px,
+    #bdbdb8 14px
+  );
+}
+
+.setting-card > span,
+.new-memory-card span {
+  color: #202020;
+  background: #d8d8d3;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.38);
+}
