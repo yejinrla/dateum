@@ -2068,7 +2068,7 @@ body {
 
 .memory-card {
   min-height: 0;
-  padding: 0;
+  padding: 14px 16px 16px;
 }
 
 .memory-art {
@@ -2076,11 +2076,14 @@ body {
 }
 
 .memory-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding: 0;
 }
 
 .memory-copy h4 {
-  margin: 4px 0 6px;
+  margin: 0;
   font: 700 22px/1.15 "Gaegu", "Noto Sans KR", sans-serif;
   color: #111;
 }
@@ -2091,7 +2094,7 @@ body {
 
 .date-list-card {
   display: block;
-  padding: 0;
+  padding: 16px 18px 18px;
 }
 
 .date-icon {
