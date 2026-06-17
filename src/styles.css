@@ -2871,3 +2871,25 @@ body {
 .content .couple-hero h2 {
   font-size: 21px;
 }
+
+.content .hero-card .hero-copy h2 {
+  font-size: 26px;
+}
+
+.content .hero-card .hero-date {
+  font-size: 14px;
+}
+
+.content .hero-card .route-stop span {
+  width: 21px;
+  height: 21px;
+  font-size: 11px;
+}
+
+.content .hero-card .route-stop p {
+  font-size: 17px;
+}
+
+.content .hero-card .text-button {
+  font-size: 15px;
+}
