@@ -2929,3 +2929,86 @@ body {
 .content .page-header p {
   color: #555;
 }
+
+.content .hero-card .soft-label {
+  font-size: 11px;
+}
+
+.content .hero-card .hero-copy h2 {
+  font-size: 24px;
+}
+
+.content .hero-card .hero-date {
+  font-size: 13px;
+}
+
+.content .hero-card .route-stop span {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.content .hero-card .route-stop p {
+  font-size: 15px;
+}
+
+.content .hero-card .text-button {
+  font-size: 14px;
+}
+
+.content .dashboard-grid .section-title h3,
+.content .memories-section .section-title h3 {
+  font-size: 18px;
+}
+
+.content .dashboard-grid .section-title p,
+.content .memories-section .section-title p {
+  font-size: 13px;
+}
+
+.content .dashboard-grid .section-title button,
+.content .memories-section .section-title button {
+  font-size: 14px;
+}
+
+.content .dashboard-grid .todo-content strong {
+  font-size: 16px;
+}
+
+.content .dashboard-grid .todo-content > span,
+.content .dashboard-grid .todo-row time {
+  font-size: 12px;
+}
+
+.content .dashboard-grid .add-row-button,
+.content .dashboard-grid .inline-link {
+  font-size: 14px;
+}
+
+.content .dashboard-grid .footprint-copy h3 {
+  font-size: 18px;
+}
+
+.content .dashboard-grid .footprint-copy h3 strong {
+  font-size: 19px;
+}
+
+.content .dashboard-grid .footprint-copy p {
+  font-size: 13px;
+}
+
+.content .memories-section .memory-copy time {
+  font-size: 12px;
+}
+
+.content .memories-section .memory-copy h4 {
+  font-size: 20px;
+}
+
+.content .memories-section .memory-copy p {
+  font-size: 13px;
+}
+
+.content .memories-section .new-memory-card {
+  font-size: 14px;
+}
