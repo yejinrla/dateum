@@ -2786,3 +2786,165 @@ body {
 .course-detail-status {
   font-size: 14px;
 }
+
+/* Reference-style home card layout */
+.mobile-header {
+  padding: 34px 40px 20px;
+}
+
+.mobile-header::before {
+  margin-bottom: 62px;
+}
+
+.mobile-actions {
+  top: 42px;
+  right: 40px;
+  gap: 24px;
+}
+
+.mobile-actions::before {
+  width: 34px;
+  height: 34px;
+  border-width: 3px;
+  border-radius: 12px;
+}
+
+.mobile-actions::after {
+  width: 34px;
+  height: 34px;
+}
+
+.mobile-actions button,
+.icon-button {
+  width: 34px;
+  height: 34px;
+}
+
+.brand strong::after {
+  font-size: 50px;
+  line-height: 0.95;
+}
+
+.content {
+  padding: 28px 24px 0;
+}
+
+.page-header h1 {
+  font-family: var(--font-readable) !important;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.page-header p {
+  margin-top: 18px;
+  max-width: 330px;
+  font-family: var(--font-readable) !important;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(17, 17, 17, 0.58);
+}
+
+.hero-card {
+  margin: 38px 0 38px;
+  padding: 34px 36px 30px;
+  border-width: 3px !important;
+  border-radius: 34px !important;
+}
+
+.hero-copy {
+  gap: 0;
+}
+
+.soft-label {
+  margin-bottom: 38px;
+  font-family: var(--font-readable) !important;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #111;
+}
+
+.soft-label svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 2.4;
+}
+
+.hero-copy h2 {
+  margin: 0 0 26px;
+  font-family: var(--font-readable) !important;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+  color: #111;
+}
+
+.hero-card .hero-date {
+  margin: 0 0 36px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #111;
+  letter-spacing: -0.04em;
+}
+
+.hero-card .hero-date svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 2.5;
+}
+
+.hero-card .route {
+  margin: 0;
+  gap: 0;
+}
+
+.hero-card .route-stop {
+  min-height: 38px;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.hero-card .route-stop span {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid #111;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-card .route-stop:not(:last-child)::after {
+  left: 14px;
+  top: 30px;
+  bottom: -2px;
+  width: 2px;
+  background: #111;
+  opacity: 0.45;
+}
+
+.hero-card .route-stop p {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.05em;
+}
+
+.hero-card .text-button {
+  margin: 34px auto 0;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.hero-card .text-button svg {
+  display: none;
+}
