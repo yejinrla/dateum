@@ -2940,6 +2940,11 @@ body {
 
 .content .hero-card .hero-date {
   font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.content .hero-card .route {
+  margin-top: 2px;
 }
 
 .content .hero-card .route-stop span {
