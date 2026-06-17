@@ -3017,3 +3017,19 @@ body {
 .content .memories-section .new-memory-card {
   font-size: 14px;
 }
+
+.content > .hero-card {
+  margin-bottom: 26px;
+}
+
+.content > .dashboard-grid {
+  gap: 30px;
+}
+
+.content > .memories-section {
+  margin-top: 28px;
+}
+
+.content > .memories-section .memory-grid {
+  gap: 20px;
+}
