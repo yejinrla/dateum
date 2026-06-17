@@ -2744,3 +2744,45 @@ body {
   font-family: var(--font-readable) !important;
   letter-spacing: -0.025em;
 }
+
+.hero-date,
+.course-detail-heading > p,
+.date-meta,
+.memory-copy time,
+.todo-row time,
+.schedule-time,
+.schedule-place-top span,
+.schedule-place-top > small,
+.place-address,
+.place-note,
+.course-info-card dt,
+.course-info-card dd {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.route-stop span,
+.schedule-marker span {
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+}
+
+.route-stop p,
+.schedule-place-top h3 {
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.hero-card .text-button,
+.date-detail-button,
+.detail-title-actions > button,
+.inline-link {
+  font-size: 16px;
+}
+
+.place-chips span,
+.detail-title-actions > strong,
+.course-detail-status {
+  font-size: 14px;
+}
