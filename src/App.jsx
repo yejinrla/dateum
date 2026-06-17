@@ -373,6 +373,7 @@ function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, op
 
       <div className="dashboard-grid">
         <section className="card todo-preview">
+          <span className="soft-label todo-label"><ListTodo size={14} /> TO DO</span>
           <SectionTitle
             title="함께할 일"
             subtitle={`${openTodos.length}개의 할 일이 기다리고 있어요`}

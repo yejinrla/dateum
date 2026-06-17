@@ -2932,6 +2932,7 @@ body {
 
 .content .hero-card .soft-label {
   font-size: 11px;
+  margin-bottom: 10px;
 }
 
 .content .hero-card .hero-copy h2 {
@@ -3031,5 +3032,35 @@ body {
 }
 
 .content > .memories-section .memory-grid {
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+
+.content .todo-preview > .todo-label {
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.content > .memories-section .memory-card {
+  display: block;
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-height: 0;
+}
+
+.content > .memories-section .memory-copy {
+  width: 100%;
+}
+
+.content > .memories-section .memory-copy h4,
+.content > .memories-section .memory-copy p {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content > .memories-section .memory-copy p {
+  display: block;
+  -webkit-line-clamp: unset;
 }
