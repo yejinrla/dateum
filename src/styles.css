@@ -2921,3 +2921,11 @@ body {
   position: static;
   margin-left: auto;
 }
+
+.content .page-header h1 {
+  color: #3f3f3f;
+}
+
+.content .page-header p {
+  color: #555;
+}
