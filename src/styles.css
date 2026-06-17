@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
 
 @font-face {
-  font-family: "OwnglyphPositive";
-  src: url("/fonts/ongle-positive.ttf") format("truetype");
+  font-family: "OwnglyphUiyeon";
+  src: url("/fonts/ongle-uiyeon.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "OwnglyphUiyeon", "Noto Sans KR", sans-serif;
   color: #382f37;
   background: #f8f6f4;
   font-synthesis: none;
@@ -1902,7 +1902,7 @@ body {
 .date-list-copy h3,
 .course-detail-heading h1,
 .memory-copy h4 {
-  font-family: "OwnglyphPositive", "Gaegu", "Noto Sans KR", sans-serif;
+  font-family: "OwnglyphUiyeon", "Gaegu", "Noto Sans KR", sans-serif;
   font-weight: 400;
 }
 
@@ -2106,7 +2106,7 @@ body {
 
 .memory-copy h4 {
   margin: 0;
-  font: 400 22px/1.15 "OwnglyphPositive", "Gaegu", "Noto Sans KR", sans-serif;
+  font: 400 22px/1.15 "OwnglyphUiyeon", "Gaegu", "Noto Sans KR", sans-serif;
   color: #111;
 }
 
@@ -2541,4 +2541,10 @@ body {
   .main {
     box-shadow: none;
   }
+}
+
+*,
+*::before,
+*::after {
+  font-family: "OwnglyphUiyeon", "Noto Sans KR", sans-serif !important;
 }
