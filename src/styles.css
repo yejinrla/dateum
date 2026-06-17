@@ -2893,3 +2893,31 @@ body {
 .content .hero-card .text-button {
   font-size: 15px;
 }
+
+.mobile-header {
+  min-height: 82px;
+  padding: 24px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-header::before {
+  content: none;
+  display: none;
+}
+
+.mobile-header .brand {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header .brand strong::after {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.mobile-actions {
+  position: static;
+  margin-left: auto;
+}
