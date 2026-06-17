@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
 
 @font-face {
   font-family: "OwnglyphUiyeon";
@@ -13,6 +14,7 @@
   color: #382f37;
   background: #f8f6f4;
   font-synthesis: none;
+  --font-readable: "Pretendard", "Noto Sans KR", sans-serif;
   --plum: #6e4665;
   --plum-deep: #4f334a;
   --rose: #e98686;
@@ -2714,4 +2716,31 @@ body {
 
 .mobile-nav button {
   font-size: 16px;
+}
+
+.hero-date,
+.route-stop span,
+.route-stop p,
+.hero-card .text-button,
+.course-detail-heading > p,
+.date-meta,
+.memory-copy time,
+.todo-row time,
+.schedule-time,
+.schedule-marker span,
+.schedule-place-top span,
+.schedule-place-top h3,
+.schedule-place-top > small,
+.place-address,
+.place-note,
+.course-info-card dt,
+.course-info-card dd,
+.place-chips span,
+.date-detail-button,
+.detail-title-actions > strong,
+.detail-title-actions > button,
+.course-detail-status,
+.inline-link {
+  font-family: var(--font-readable) !important;
+  letter-spacing: -0.025em;
 }
