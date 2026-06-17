@@ -1793,7 +1793,6 @@ body {
 .memory-card,
 .new-memory-card,
 .date-list-card,
-.course-detail-hero,
 .course-schedule-card,
 .course-info-card,
 .course-todo-card,
@@ -1831,8 +1830,8 @@ body {
 .setting-card,
 .modal {
   background: #fff !important;
-  border: 0 !important;
-  border-radius: 24px 29px 22px 31px !important;
+  border: 2px solid #111 !important;
+  border-radius: 26px !important;
 }
 
 .hero-card::after,
@@ -1845,71 +1844,6 @@ body {
 .flower,
 .mini-map {
   display: none !important;
-}
-
-.hero-card,
-.card,
-.todo-summary,
-.footprint-preview,
-.memory-card,
-.new-memory-card,
-.date-list-card,
-.course-detail-hero,
-.course-schedule-card,
-.course-info-card,
-.course-todo-card,
-.course-note-card,
-.map-card,
-.selected-district,
-.top-districts,
-.national-footprints,
-.couple-hero,
-.setting-card,
-.modal {
-  position: relative;
-  box-shadow: 2px 3px 0 rgba(17, 17, 17, 0.1) !important;
-}
-
-.hero-card::before,
-.card::before,
-.todo-summary::before,
-.footprint-preview::before,
-.memory-card::before,
-.new-memory-card::before,
-.date-list-card::before,
-.course-detail-hero::before,
-.course-schedule-card::before,
-.course-info-card::before,
-.course-todo-card::before,
-.course-note-card::before,
-.map-card::before,
-.selected-district::before,
-.top-districts::before,
-.national-footprints::before,
-.couple-hero::before,
-.setting-card::before,
-.modal::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid #111;
-  border-radius: 26px 33px 21px 30px;
-  transform: rotate(-0.95deg);
-  pointer-events: none;
-}
-
-.memory-card:nth-child(even)::before,
-.date-list-card:nth-child(even)::before,
-.setting-card:nth-child(even)::before,
-.course-schedule-card::before,
-.course-info-card::before,
-.course-todo-card::before,
-.course-note-card::before,
-.map-card::before,
-.selected-district::before,
-.top-districts::before,
-.national-footprints::before {
-  transform: rotate(0.75deg);
 }
 
 .hero-card {
