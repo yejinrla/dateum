@@ -2548,3 +2548,170 @@ body {
 *::after {
   font-family: "OwnglyphUiyeon", "Noto Sans KR", sans-serif !important;
 }
+
+body {
+  font-size: 19px;
+}
+
+.mobile-header::before {
+  font-size: 28px;
+}
+
+.brand strong::after {
+  font-size: 48px;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.page-header p {
+  max-width: 310px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.soft-label,
+.conquest-card > span,
+.selected-label,
+.national-footprints-heading span,
+.detail-card-label,
+.detail-section-title span {
+  font-size: 16px;
+}
+
+.hero-copy h2 {
+  font-size: 40px;
+  line-height: 1.08;
+}
+
+.hero-date,
+.course-detail-heading > p,
+.date-meta,
+.memory-copy time,
+.todo-row time,
+.course-info-card dt,
+.course-info-card dd,
+.schedule-time,
+.schedule-place-top span,
+.schedule-place-top > small,
+.place-address,
+.place-note,
+.course-empty-copy,
+.district-title small,
+.district-history small,
+.national-footprints-heading p {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.route-stop span,
+.schedule-marker span {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+}
+
+.route-stop p {
+  font-size: 23px;
+}
+
+.text-button,
+.section-title button,
+.inline-link,
+.date-detail-button,
+.back-button,
+.district-empty button,
+.filter-tabs button,
+.segmented-control button,
+.detail-title-actions > button {
+  font-size: 19px;
+}
+
+.section-title h3,
+.course-info-card h3,
+.course-todo-card h3,
+.setting-card strong {
+  font-size: 25px;
+}
+
+.section-title p,
+.todo-content > span,
+.footprint-copy p,
+.memory-copy p,
+.summary-copy p,
+.district-empty p,
+.setting-card small,
+.modal-header p,
+.modal-body label,
+.duration-spinner legend {
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.todo-content strong {
+  font-size: 25px;
+  line-height: 1.18;
+}
+
+.assignee,
+.assignee.pink,
+.status,
+.detail-title-actions > strong,
+.course-detail-status,
+.place-chips span {
+  font-size: 16px;
+}
+
+.add-row-button,
+.course-empty-route button,
+.primary-button,
+.secondary-button,
+.province-grid button,
+.new-memory-card,
+.setting-card {
+  font-size: 21px;
+}
+
+.memory-copy h4 {
+  font-size: 29px;
+  line-height: 1.08;
+}
+
+.date-list-copy h3 {
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.date-list-copy > p,
+.modal-body input,
+.modal-body select,
+.modal-body textarea,
+.duration-spinner input,
+.toast {
+  font-size: 19px;
+}
+
+.course-detail-heading h1 {
+  font-size: 42px;
+  line-height: 1.04;
+}
+
+.schedule-place-top h3,
+.course-note-card strong,
+.selected-district h4,
+.top-districts h4,
+.national-footprints-heading h2,
+.couple-hero h2 {
+  font-size: 27px;
+}
+
+.conquest-card strong,
+.national-footprints-heading strong {
+  font-size: 38px;
+}
+
+.mobile-nav button {
+  font-size: 16px;
+}
