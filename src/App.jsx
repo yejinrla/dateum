@@ -272,7 +272,6 @@ function MobileHeader({ activeTab }) {
     <header className="mobile-header">
       <Brand />
       <div className="mobile-actions">
-        <button aria-label="알림"><Bell size={20} /></button>
         <span className="mobile-title">{title}</span>
       </div>
     </header>
@@ -315,7 +314,7 @@ function PageHeader({ eyebrow, title, description, action }) {
 function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, openCourse }) {
   const nextDate = dates.find((item) => item.status === "upcoming");
   const openTodos = todos.filter((item) => !item.completed);
-  const homeTodos = [...todos].sort((a, b) => Number(a.completed) - Number(b.completed)).slice(0, 3);
+  const homeTodos = todos.slice(0, 3);
   const seoulDistrictNames = new Set(districts.map((district) => district.name));
   const visitedCount = Object.keys(visits).filter(
     (name) => seoulDistrictNames.has(name) && visits[name] > 0,
