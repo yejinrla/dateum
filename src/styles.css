@@ -1734,6 +1734,7 @@ body {
 
 .todo-row time {
   align-self: flex-start;
+  margin-top: -2px;
 }
 
 .content .dashboard-grid .add-row-button,
