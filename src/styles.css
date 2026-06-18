@@ -151,7 +151,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .todo-content { min-width: 0; flex: 1; }
 .todo-content strong { display: block; font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .todo-content > span { display: flex; align-items: center; gap: 6px; margin-top: 5px; color: #a3989d; font-size: 9px; }
-.assignee { display: inline-block; color: #6f5a70; background: #f0eaf1; padding: 2px 6px; border-radius: 5px; }
+.assignee { display: inline-block; color: #6f5a70; background: #f0eaf1; padding: 2px 6px; border-radius: 5px; font-size: 8px; }
 .assignee.pink { color: #aa6269; background: #f9e7e6; }
 .dot-separator { color: #c8bfc2; }
 .todo-row time { display: flex; align-items: center; gap: 4px; color: #9d9398; font-size: 9px; }
