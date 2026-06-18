@@ -1726,12 +1726,7 @@ body {
 }
 
 .mobile-actions::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  border: 2px solid #111;
-  border-radius: 9px 9px 9px 3px;
-  display: block;
+  display: none;
 }
 
 .mobile-actions::after {
