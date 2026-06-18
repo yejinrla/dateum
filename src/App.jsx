@@ -38,6 +38,7 @@ function CourseDetailRoute({ dates, todos, toggleTodo, setModal }) {
       todos={todos}
       toggleTodo={toggleTodo}
       onOpenPlaceModal={() => setModal({ type: "place", courseId: course.id })}
+      onEdit={() => setModal({ type: "edit-date", courseId: course.id })}
       onBack={() => navigate(-1)}
     />
   );
@@ -86,6 +87,16 @@ function App() {
     }));
     setModal(null);
     notify(`${date.province} ${date.district}에 새로운 발자국이 생겼어요!`);
+  };
+
+  const updateDate = (courseId, updates) => {
+    setDates((current) =>
+      current.map((date) =>
+        date.id === courseId ? { ...date, ...updates } : date,
+      ),
+    );
+    setModal(null);
+    notify("데이트 기록을 수정했어요.");
   };
 
   const addPlaceToCourse = (courseId, place) => {
@@ -179,6 +190,13 @@ function App() {
           initialProvince={modal?.province}
           onClose={() => setModal(null)}
           onAdd={addDate}
+        />
+      )}
+      {modal?.type === "edit-date" && (
+        <DateModal
+          initialDate={dates.find((date) => date.id === modal.courseId)}
+          onClose={() => setModal(null)}
+          onSave={(updates) => updateDate(modal.courseId, updates)}
         />
       )}
       {modal?.type === "place" && (

@@ -1,4 +1,4 @@
-import { ArrowLeft, CalendarDays, Clock3, Heart, MapPin, Plus } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock3, Heart, MapPin, Pencil, Plus } from "lucide-react";
 import TodoRow from "../components/TodoRow";
 
 const placeDetails = {
@@ -46,7 +46,14 @@ const placeDetails = {
   },
 };
 
-export default function CourseDetailPage({ course, todos, toggleTodo, onOpenPlaceModal, onBack }) {
+export default function CourseDetailPage({
+  course,
+  todos,
+  toggleTodo,
+  onOpenPlaceModal,
+  onEdit,
+  onBack,
+}) {
   const fallbackTimes = ["13:00", "15:00", "17:00", "19:00"];
   const areaKeyword = course.area?.replace(/[동구]$/, "") || "";
   const relatedTodos = todos.filter(
@@ -57,9 +64,14 @@ export default function CourseDetailPage({ course, todos, toggleTodo, onOpenPlac
 
   return (
     <div className="course-detail-page">
-      <button className="back-button" onClick={onBack}>
-        <ArrowLeft size={18} /> 이전으로
-      </button>
+      <div className="course-detail-topbar">
+        <button className="back-button" onClick={onBack}>
+          <ArrowLeft size={18} /> 이전으로
+        </button>
+        <button className="course-edit-button" onClick={onEdit}>
+          <Pencil size={14} /> 수정
+        </button>
+      </div>
 
       <div className="course-detail-heading">
         <h1>{course.title}</h1>

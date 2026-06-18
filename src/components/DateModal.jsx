@@ -2,17 +2,30 @@ import { useState } from "react";
 import Modal from "./Modal";
 import { nationwideRegions } from "../data";
 
-export default function DateModal({ initialDistrict, initialProvince = "서울특별시", onClose, onAdd }) {
-  const startingDistrict = initialDistrict || nationwideRegions[initialProvince]?.[0] || "직접 입력";
+export default function DateModal({
+  initialDate,
+  initialDistrict,
+  initialProvince = "서울특별시",
+  onClose,
+  onAdd,
+  onSave,
+}) {
+  const isEditing = Boolean(initialDate);
+  const startingProvince = initialDate?.province || initialProvince;
+  const provinceRegions = nationwideRegions[startingProvince] || [];
+  const hasKnownDistrict = provinceRegions.includes(initialDate?.district);
+  const startingDistrict = initialDate
+    ? (hasKnownDistrict ? initialDate.district : "직접 입력")
+    : initialDistrict || provinceRegions[0] || "직접 입력";
   const [form, setForm] = useState({
-    title: "",
-    date: "2026-06-16",
-    province: initialProvince,
+    title: initialDate?.title || "",
+    date: initialDate?.date || "2026-06-16",
+    province: startingProvince,
     district: startingDistrict,
-    customDistrict: "",
-    area: "",
-    places: "",
-    note: "",
+    customDistrict: initialDate && !hasKnownDistrict ? initialDate.district : "",
+    area: initialDate?.area || "",
+    places: (initialDate?.places || []).join(", "),
+    note: initialDate?.note || "",
   });
   const update = (field) => (event) => setForm({ ...form, [field]: event.target.value });
   const regionOptions = nationwideRegions[form.province] || [];
@@ -27,21 +40,30 @@ export default function DateModal({ initialDistrict, initialProvince = "서울�
   };
   return (
     <Modal
-      title="새로운 방문 기록"
-      subtitle="전국 어디든 선택해 둘만의 발자국을 남길 수 있어요."
+      title={isEditing ? "데이트 기록 수정" : "새로운 방문 기록"}
+      subtitle={
+        isEditing
+          ? "데이트 정보와 코스를 원하는 내용으로 고쳐보세요."
+          : "전국 어디든 선택해 둘만의 발자국을 남길 수 있어요."
+      }
       onClose={onClose}
-      submitLabel="발자국 남기기"
+      submitLabel={isEditing ? "수정 내용 저장" : "발자국 남기기"}
       onSubmit={(event) => {
         event.preventDefault();
         if (!form.title.trim()) return;
         const district = form.district === "직접 입력" ? form.customDistrict.trim() : form.district;
         if (!district) return;
-        onAdd({
+        const nextDate = {
           ...form,
           district,
           area: form.area || district,
           places: form.places.split(",").map((item) => item.trim()).filter(Boolean),
-        });
+        };
+        if (isEditing) {
+          onSave(nextDate);
+        } else {
+          onAdd(nextDate);
+        }
       }}
     >
       <label>데이트 제목<input autoFocus required value={form.title} onChange={update("title")} placeholder="예: 해방촌 노을 산책" /></label>

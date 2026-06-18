@@ -2127,3 +2127,32 @@ body {
   margin: 0;
 }
 
+.content .course-detail-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.content .course-detail-topbar .back-button {
+  margin-bottom: 0;
+}
+
+.content .course-edit-button {
+  height: 32px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1.5px solid #111;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-family: var(--font-readable) !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
