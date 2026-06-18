@@ -3055,6 +3055,10 @@ body {
   margin-top: 8px;
 }
 
+.content .todo-preview:hover {
+  transform: none;
+}
+
 .content > .memories-section .memory-card {
   display: block;
   grid-template-columns: 1fr;
