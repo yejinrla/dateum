@@ -1832,6 +1832,7 @@ body {
   grid-template-columns: 1fr;
   width: 100%;
   min-height: 0;
+  padding: 18px 16px;
 }
 
 .content > .memories-section .memory-copy {
