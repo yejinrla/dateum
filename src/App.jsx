@@ -25,7 +25,7 @@ import CourseDetailPage from "./pages/CourseDetailPage";
 
 const tabToPath = (tab) => (tab === "home" ? "/" : `/${tab}`);
 
-function CourseDetailRoute({ dates, todos, toggleTodo, setModal }) {
+function CourseDetailRoute({ dates, todos, toggleTodo, setModal, onRemovePlace }) {
   const { courseId } = useParams();
   const navigate = useNavigate();
   const course = dates.find((date) => String(date.id) === courseId);
@@ -39,6 +39,7 @@ function CourseDetailRoute({ dates, todos, toggleTodo, setModal }) {
       toggleTodo={toggleTodo}
       onOpenPlaceModal={() => setModal({ type: "place", courseId: course.id })}
       onEdit={() => setModal({ type: "edit-date", courseId: course.id })}
+      onRemovePlace={(placeName) => onRemovePlace(course.id, placeName)}
       onBack={() => navigate(-1)}
     />
   );
@@ -127,6 +128,19 @@ function App() {
     }
   };
 
+  const removePlaceFromCourse = (courseId, placeName) => {
+    setDates((current) =>
+      current.map((date) => {
+        if (date.id !== courseId) return date;
+        const places = date.places.filter((p) => p !== placeName);
+        const customPlaceDetails = { ...(date.customPlaceDetails || {}) };
+        delete customPlaceDetails[placeName];
+        return { ...date, places, customPlaceDetails };
+      }),
+    );
+    notify(`${placeName}을 코스에서 삭제했어요.`);
+  };
+
   const toggleTodo = (id) => {
     setTodos((current) =>
       current.map((todo) =>
@@ -171,6 +185,7 @@ function App() {
                   todos={todos}
                   toggleTodo={toggleTodo}
                   setModal={setModal}
+                  onRemovePlace={removePlaceFromCourse}
                 />
               }
             />

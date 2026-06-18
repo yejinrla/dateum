@@ -1,4 +1,5 @@
-import { ArrowLeft, CalendarDays, Clock3, Heart, MapPin, Pencil, Plus } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, CalendarDays, Clock3, Heart, MapPin, Pencil, Plus, X } from "lucide-react";
 import TodoRow from "../components/TodoRow";
 
 const placeDetails = {
@@ -52,8 +53,10 @@ export default function CourseDetailPage({
   toggleTodo,
   onOpenPlaceModal,
   onEdit,
+  onRemovePlace,
   onBack,
 }) {
+  const [editing, setEditing] = useState(false);
   const fallbackTimes = ["13:00", "15:00", "17:00", "19:00"];
   const areaKeyword = course.area?.replace(/[동구]$/, "") || "";
   const relatedTodos = todos.filter(
@@ -94,6 +97,12 @@ export default function CourseDetailPage({
             </div>
             <div className="detail-title-actions">
               <strong>총 {course.places.length}곳</strong>
+              <button
+                className={`icon-button${editing ? " icon-button--active" : ""}`}
+                onClick={() => setEditing(!editing)}
+              >
+                <Pencil size={14} />
+              </button>
               <button className="icon-button" onClick={onOpenPlaceModal}><Plus size={16} /></button>
             </div>
           </div>
@@ -118,7 +127,17 @@ export default function CourseDetailPage({
                         <span>{detail.category}</span>
                         <h3>{place}</h3>
                       </div>
-                      <small><Clock3 size={13} /> {detail.duration}</small>
+                      {editing ? (
+                        <button
+                          className="schedule-remove-btn"
+                          onClick={() => onRemovePlace(place)}
+                          aria-label={`${place} 삭제`}
+                        >
+                          <X size={13} />
+                        </button>
+                      ) : (
+                        <small><Clock3 size={13} /> {detail.duration}</small>
+                      )}
                     </div>
                     <p className="place-address"><MapPin size={14} /> {detail.address}</p>
                     <p className="place-note">{detail.note}</p>

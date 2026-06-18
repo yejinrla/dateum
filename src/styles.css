@@ -958,6 +958,30 @@ body {
   stroke: #fff;
 }
 
+.detail-title-actions > .icon-button--active {
+  background: #b05560;
+  border-color: #b05560;
+}
+
+.schedule-remove-btn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #e5d7d6;
+  background: #fff5f5;
+  color: #b05560;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.schedule-remove-btn svg {
+  stroke: #b05560;
+  stroke-width: 2;
+}
+
 .schedule-item {
   grid-template-columns: 46px 1fr;
   gap: 12px;
