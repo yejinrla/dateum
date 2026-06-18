@@ -959,17 +959,33 @@ body {
 }
 
 .schedule-item {
-  grid-template-columns: 42px 24px 1fr;
-  gap: 10px;
-  align-items: start;
+  grid-template-columns: 46px 1fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.schedule-marker {
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 .schedule-time {
-  padding-top: 0;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  text-align: center;
+  background: #fff;
 }
 
 .schedule-place-top > small {
   margin-top: 0;
+}
+
+.schedule-marker::after {
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .schedule-marker span {

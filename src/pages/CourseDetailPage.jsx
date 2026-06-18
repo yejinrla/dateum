@@ -96,8 +96,10 @@ export default function CourseDetailPage({ course, todos, toggleTodo, onOpenPlac
               };
               return (
                 <article className="schedule-item" key={place}>
-                  <div className="schedule-time">{detail.time}</div>
-                  <div className="schedule-marker"><span>{index + 1}</span></div>
+                  <div className="schedule-marker">
+                    <span>{index + 1}</span>
+                    <time className="schedule-time">{detail.time}</time>
+                  </div>
                   <div className="schedule-place">
                     <div className="schedule-place-top">
                       <div>
