@@ -1341,9 +1341,23 @@ body {
 
 .modal-header p,
 .modal-body label,
+.duration-spinner legend,
+.modal-body input,
+.modal-body select,
+.modal-body textarea,
+.duration-spinner input,
+.modal-actions button {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif !important;
+}
+
+.modal-header p,
+.modal-body label,
 .duration-spinner legend {
-  font: 400 14px/1.35 "Gaegu", "Noto Sans KR", sans-serif;
-  color: rgba(17, 17, 17, 0.6);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba(17, 17, 17, 0.55);
+  letter-spacing: 0.02em;
 }
 
 .modal-header button {
@@ -1365,16 +1379,11 @@ body {
   border-radius: 18px !important;
   padding: 12px 14px;
   background: #fff !important;
-  font: 500 15px/1.25 var(--font-readable), "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.25;
   color: #111 !important;
   box-shadow: none !important;
-}
-
-.modal-body label,
-.duration-spinner legend {
-  font: 600 12px/1.35 var(--font-readable), "Noto Sans KR", sans-serif;
-  color: rgba(17, 17, 17, 0.55);
-  letter-spacing: 0.02em;
 }
 
 .modal-actions {
@@ -1388,12 +1397,16 @@ body {
   flex: 1;
   background: #111 !important;
   color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
 }
 
 .modal-actions .secondary-button {
   flex: 1;
   background: #fff !important;
   color: #111 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
 }
 
 .toast {
