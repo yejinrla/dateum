@@ -583,11 +583,10 @@ function CourseDetailPage({ course, todos, toggleTodo, onOpenPlaceModal, onBack 
 
       <section className="course-detail-hero">
         <div className="course-detail-heading">
-          <span className="soft-label"><Sparkles size={14} /> DATE COURSE</span>
+          <h1>{course.title}</h1>
           <div className="course-detail-status">
             {course.status === "upcoming" ? "다가오는 데이트" : "다녀온 데이트"}
           </div>
-          <h1>{course.title}</h1>
           <p>
             <CalendarDays size={16} />
             {course.date.replaceAll("-", ".")}
