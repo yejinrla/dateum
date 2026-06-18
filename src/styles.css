@@ -586,7 +586,7 @@ body {
 .setting-card,
 .modal {
   background: #fff !important;
-  border: 2px solid #111 !important;
+  border: 1px solid #e8e8e8 !important;
   border-radius: 26px !important;
 }
 
@@ -1227,15 +1227,17 @@ body {
 
 .mobile-nav {
   position: fixed;
-  inset: auto 0 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 430px);
   height: 66px;
   display: grid !important;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   padding: 0 0 env(safe-area-inset-bottom);
   background: #fff;
-  border-top: 1px solid #e0e0e0;
+  border-top: none;
   border-radius: 0;
   z-index: 40;
 }
@@ -1455,8 +1457,11 @@ body {
   font-size: 38px;
 }
 
-.mobile-nav button {
-  font-size: 16px;
+.mobile-nav button,
+.mobile-nav button span {
+  font-family: var(--font-readable) !important;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .hero-date,
