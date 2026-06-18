@@ -2110,3 +2110,20 @@ body {
   font-size: 12px;
 }
 
+.content .dates-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.content .dates-page-header > div {
+  min-width: 0;
+}
+
+.content .dates-page-header > .icon-button {
+  position: static;
+  flex: 0 0 auto;
+  margin: 0;
+}
+

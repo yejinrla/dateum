@@ -9,6 +9,7 @@ export default function DatesPage({ dates, setModal, openCourse }) {
   return (
     <>
       <PageHeader
+        className="dates-page-header"
         eyebrow="OUR DATE LOG"
         title={<>우리의 <em>데이트</em></>}
         description="가고 싶은 곳부터 오래 남길 장면까지 한곳에 담아요."
