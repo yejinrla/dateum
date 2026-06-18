@@ -1237,7 +1237,7 @@ body {
   align-items: center;
   padding: 0 0 env(safe-area-inset-bottom);
   background: #fff;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #111;
   border-radius: 0;
   z-index: 40;
 }
