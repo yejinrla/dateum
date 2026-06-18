@@ -943,6 +943,21 @@ body {
   font: 400 16px/1 "Gaegu", "Noto Sans KR", sans-serif;
 }
 
+.detail-title-actions > .icon-button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #111;
+  color: #fff;
+}
+
+.detail-title-actions > .icon-button svg {
+  stroke: #fff;
+}
+
 .schedule-item {
   grid-template-columns: 42px 24px 1fr;
   gap: 10px;
