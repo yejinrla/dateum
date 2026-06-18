@@ -581,25 +581,17 @@ function CourseDetailPage({ course, todos, toggleTodo, onOpenPlaceModal, onBack 
         <ArrowLeft size={18} /> 이전으로
       </button>
 
-      <section className="course-detail-hero">
-        <div className="course-detail-heading">
-          <h1>{course.title}</h1>
-          <div className="course-detail-status">
-            {course.status === "upcoming" ? "다가오는 데이트" : "다녀온 데이트"}
-          </div>
-          <p>
-            <CalendarDays size={16} />
-            {course.date.replaceAll("-", ".")}
-            <span>·</span>
-            <MapPin size={16} />
-            {course.province || "서울특별시"} {course.district} {course.area}
-          </p>
-        </div>
-        <div className={`course-detail-art ${course.color}`}>
-          <span>{course.emoji}</span>
-          <small>{course.places.length} PLACES</small>
-        </div>
-      </section>
+      <div className="course-detail-heading">
+        <h1>{course.title}</h1>
+        {course.note && <p className="course-detail-note">{course.note}</p>}
+        <p className="course-detail-meta">
+          <CalendarDays size={16} />
+          {course.date.replaceAll("-", ".")}
+          <span>·</span>
+          <MapPin size={16} />
+          {course.province || "서울특별시"} {course.district} {course.area}
+        </p>
+      </div>
 
       <div className="course-detail-layout">
         <section className="course-schedule-card">

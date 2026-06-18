@@ -223,8 +223,10 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .course-detail-hero::after { content: ""; position: absolute; width: 290px; height: 290px; right: -90px; top: -110px; border-radius: 50%; background: rgba(255,255,255,.27); }
 .course-detail-heading { position: relative; z-index: 1; }
 .course-detail-status { display: inline-block; margin-left: 9px; padding: 4px 8px; border-radius: 7px; color: #a86269; background: rgba(255,255,255,.66); font-size: 8px; font-weight: 700; }
-.course-detail-heading h1 { margin: 15px 0 10px; font: 34px/1.25 "DM Serif Display","Noto Sans KR",serif; color: var(--plum-deep); }
-.course-detail-heading > p { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: #806b75; font-size: 11px; }
+.course-detail-heading { margin-bottom: 24px; }
+.course-detail-heading h1 { margin: 0 0 8px; font: 34px/1.25 "DM Serif Display","Noto Sans KR",serif; color: var(--plum-deep); }
+.course-detail-note { margin: 0 0 8px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.course-detail-meta { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: #806b75; font-size: 11px; }
 .course-detail-art { position: relative; z-index: 1; width: 156px; height: 156px; justify-self: center; border: 9px solid rgba(255,255,255,.72); border-radius: 50%; display: grid; place-items: center; box-shadow: 0 17px 35px rgba(104,71,86,.13); }
 .course-detail-art.mint { background: #dcebd9; }
 .course-detail-art.butter { background: #f3d9a9; }
