@@ -3059,6 +3059,14 @@ body {
   transform: none;
 }
 
+.content .check-button,
+.content .check-button:hover,
+.content .check-button:focus,
+.content .completed .check-button {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
 .content > .memories-section .memory-card {
   display: block;
   grid-template-columns: 1fr;
