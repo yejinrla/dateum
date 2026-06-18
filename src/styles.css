@@ -586,7 +586,7 @@ body {
 .setting-card,
 .modal {
   background: #fff !important;
-  border: 1px solid #e8e8e8 !important;
+  border: 2px solid #111 !important;
   border-radius: 26px !important;
 }
 
