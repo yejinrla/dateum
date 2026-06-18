@@ -400,7 +400,7 @@ function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, op
         />
         <div className="memory-grid">
           {doneDates.slice(0, 3).map((date) => (
-            <MemoryCard key={date.id} date={date} />
+            <MemoryCard key={date.id} date={date} openCourse={openCourse} />
           ))}
           <button className="new-memory-card" onClick={() => setModal("date")}>
             <span><Plus size={22} /></span>
@@ -449,9 +449,9 @@ function TodoRow({ todo, onToggle, compact = false }) {
   );
 }
 
-function MemoryCard({ date }) {
+function MemoryCard({ date, openCourse }) {
   return (
-    <article className={`memory-card ${date.color}`}>
+    <button className={`memory-card ${date.color}`} onClick={() => openCourse(date, "home")}>
       <div className="memory-art">
         <span className="memory-emoji">{date.emoji}</span>
         <span className="polaroid-label">{date.area}</span>
@@ -462,7 +462,7 @@ function MemoryCard({ date }) {
         <h4>{date.title}</h4>
         <p>{date.note}</p>
       </div>
-    </article>
+    </button>
   );
 }
 
