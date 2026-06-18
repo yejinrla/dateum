@@ -961,6 +961,15 @@ body {
 .schedule-item {
   grid-template-columns: 42px 24px 1fr;
   gap: 10px;
+  align-items: start;
+}
+
+.schedule-time {
+  padding-top: 0;
+}
+
+.schedule-place-top > small {
+  margin-top: 0;
 }
 
 .schedule-marker span {
