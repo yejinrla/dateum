@@ -2657,13 +2657,16 @@ body {
   line-height: 1.18;
 }
 
-.assignee,
-.assignee.pink,
 .status,
 .detail-title-actions > strong,
 .course-detail-status,
 .place-chips span {
   font-size: 16px;
+}
+
+.assignee,
+.assignee.pink {
+  font-size: 11px;
 }
 
 .add-row-button,
