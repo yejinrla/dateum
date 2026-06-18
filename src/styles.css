@@ -986,8 +986,9 @@ body {
 }
 
 .course-note-card {
-  padding: 0;
+  padding: 16px 20px;
   gap: 10px;
+  align-items: center;
 }
 
 .course-note-card strong,
