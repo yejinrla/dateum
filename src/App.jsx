@@ -458,8 +458,8 @@ function MemoryCard({ date, openCourse }) {
         <span className="tape" />
       </div>
       <div className="memory-copy">
-        <time>{date.date.replaceAll("-", ".")}</time>
         <h4>{date.title}</h4>
+        <time>{date.date.replaceAll("-", ".")}</time>
         <p>{date.note}</p>
       </div>
     </button>
