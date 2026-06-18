@@ -3076,6 +3076,8 @@ body {
 
 .content > .memories-section .memory-copy {
   width: 100%;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .content > .memories-section .memory-copy h4,
