@@ -1,4 +1,12 @@
 import { useEffect, useState } from "react";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { CheckCircle2 } from "lucide-react";
 import { initialDates, initialTodos, initialVisits } from "./data";
 import { usePersistedState } from "./hooks/usePersistedState";
@@ -15,15 +23,37 @@ import FootprintsPage from "./pages/FootprintsPage";
 import CouplePage from "./pages/CouplePage";
 import CourseDetailPage from "./pages/CourseDetailPage";
 
+const tabToPath = (tab) => (tab === "home" ? "/" : `/${tab}`);
+
+function CourseDetailRoute({ dates, todos, toggleTodo, setModal }) {
+  const { courseId } = useParams();
+  const navigate = useNavigate();
+  const course = dates.find((date) => String(date.id) === courseId);
+
+  if (!course) return <Navigate to="/dates" replace />;
+
+  return (
+    <CourseDetailPage
+      course={course}
+      todos={todos}
+      toggleTodo={toggleTodo}
+      onOpenPlaceModal={() => setModal({ type: "place", courseId: course.id })}
+      onBack={() => navigate(-1)}
+    />
+  );
+}
+
 function App() {
-  const [activeTab, setActiveTab] = useState("home");
-  const [selectedCourse, setSelectedCourse] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
   const [dates, setDates] = usePersistedState("dateum-dates", initialDates);
   const [todos, setTodos] = usePersistedState("dateum-todos", initialTodos);
   const [visits, setVisits] = usePersistedState("dateum-visits", initialVisits);
   const [modal, setModal] = useState(null);
   const [toast, setToast] = useState("");
   const [clock, setClock] = useState(() => formatClock(new Date()));
+
+  const activeTab = location.pathname.split("/")[1] || "home";
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -59,10 +89,11 @@ function App() {
   };
 
   const addPlaceToCourse = (courseId, place) => {
-    let updatedCourse;
+    let added = false;
     setDates((current) =>
       current.map((date) => {
         if (date.id !== courseId) return date;
+        added = true;
         const places = [...(date.places || []), place.name];
         const customPlaceDetails = {
           ...(date.customPlaceDetails || {}),
@@ -76,16 +107,10 @@ function App() {
             note: place.note || "둘만의 메모를 남겨보세요.",
           },
         };
-        updatedCourse = { ...date, places, customPlaceDetails };
-        return updatedCourse;
+        return { ...date, places, customPlaceDetails };
       }),
     );
-    if (updatedCourse) {
-      setSelectedCourse((current) =>
-        current?.course?.id === courseId
-          ? { ...current, course: updatedCourse }
-          : current,
-      );
+    if (added) {
       setModal(null);
       notify(`${place.name}을 코스에 추가했어요.`);
     }
@@ -100,13 +125,11 @@ function App() {
   };
 
   const navigateToTab = (tab) => {
-    setSelectedCourse(null);
-    setActiveTab(tab);
+    navigate(tabToPath(tab));
   };
 
-  const openCourse = (course, returnTab) => {
-    setSelectedCourse({ course, returnTab });
-    setActiveTab("dates");
+  const openCourse = (course) => {
+    navigate(`/dates/${course.id}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -126,23 +149,25 @@ function App() {
       <main className="main">
         <MobileHeader activeTab={activeTab} clock={clock} />
         <div className="content">
-          {selectedCourse ? (
-            <CourseDetailPage
-              course={selectedCourse.course}
-              todos={todos}
-              toggleTodo={toggleTodo}
-              onOpenPlaceModal={() => setModal({ type: "place", courseId: selectedCourse.course.id })}
-              onBack={() => navigateToTab(selectedCourse.returnTab)}
+          <Routes>
+            <Route path="/" element={<HomePage {...commonProps} />} />
+            <Route path="/dates" element={<DatesPage {...commonProps} />} />
+            <Route
+              path="/dates/:courseId"
+              element={
+                <CourseDetailRoute
+                  dates={dates}
+                  todos={todos}
+                  toggleTodo={toggleTodo}
+                  setModal={setModal}
+                />
+              }
             />
-          ) : (
-            <>
-              {activeTab === "home" && <HomePage {...commonProps} />}
-              {activeTab === "dates" && <DatesPage {...commonProps} />}
-              {activeTab === "todos" && <TodosPage {...commonProps} />}
-              {activeTab === "footprints" && <FootprintsPage {...commonProps} />}
-              {activeTab === "couple" && <CouplePage {...commonProps} />}
-            </>
-          )}
+            <Route path="/todos" element={<TodosPage {...commonProps} />} />
+            <Route path="/footprints" element={<FootprintsPage {...commonProps} />} />
+            <Route path="/couple" element={<CouplePage {...commonProps} />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </div>
         <MobileNav activeTab={activeTab} setActiveTab={navigateToTab} />
       </main>
