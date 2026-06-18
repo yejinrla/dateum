@@ -1609,6 +1609,8 @@ body,
   background: rgba(0, 0, 0, 0.38);
 }
 
+@media (max-width: 760px) {
+
 /* Minimal notebook phone theme */
 :root {
   color: #111;
@@ -2532,12 +2534,6 @@ body {
   line-height: 0.95;
 }
 
-@media (min-width: 760px) {
-  .main {
-    box-shadow: none;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -3090,3 +3086,5 @@ body {
   display: block;
   -webkit-line-clamp: unset;
 }
+
+} /* end @media (max-width: 760px) phone theme */
