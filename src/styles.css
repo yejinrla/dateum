@@ -3039,10 +3039,11 @@ body {
   font-size: 11px;
 }
 
+.content .hero-card .hero-copy h2,
 .content .todo-preview .section-title h3 {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 600;
   color: #111;
 }
 
