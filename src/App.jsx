@@ -314,7 +314,8 @@ function PageHeader({ eyebrow, title, description, action }) {
 
 function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, openCourse }) {
   const nextDate = dates.find((item) => item.status === "upcoming");
-  const openTodos = todos.filter((item) => !item.completed).slice(0, 3);
+  const openTodos = todos.filter((item) => !item.completed);
+  const homeTodos = [...todos].sort((a, b) => Number(a.completed) - Number(b.completed)).slice(0, 3);
   const seoulDistrictNames = new Set(districts.map((district) => district.name));
   const visitedCount = Object.keys(visits).filter(
     (name) => seoulDistrictNames.has(name) && visits[name] > 0,
@@ -380,7 +381,7 @@ function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, op
             action={<button onClick={() => setActiveTab("todos")}>전체보기</button>}
           />
           <div className="todo-list">
-            {openTodos.map((todo) => (
+            {homeTodos.map((todo) => (
               <TodoRow key={todo.id} todo={todo} onToggle={toggleTodo} compact />
             ))}
           </div>
