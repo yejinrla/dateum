@@ -103,7 +103,6 @@ export default function CourseDetailPage({
               >
                 <Pencil size={14} />
               </button>
-              <button className="icon-button" onClick={onOpenPlaceModal}><Plus size={16} /></button>
             </div>
           </div>
           <div className="course-schedule">
