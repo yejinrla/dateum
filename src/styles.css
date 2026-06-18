@@ -2048,3 +2048,65 @@ body {
   font-weight: 500;
 }
 
+.content .course-detail-layout,
+.content .course-side-panel {
+  gap: 26px;
+}
+
+.content .course-schedule-card,
+.content .course-info-card,
+.content .course-todo-card,
+.content .course-note-card {
+  padding: 18px 18px 20px;
+}
+
+.content .detail-section-title h2,
+.content .course-info-card h3,
+.content .course-todo-card h3,
+.content .course-note-card strong {
+  color: #111;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.content .detail-section-title span,
+.content .detail-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.content .schedule-place-top h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.content .schedule-time,
+.content .schedule-place-top span,
+.content .schedule-place-top > small {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.content .place-address,
+.content .place-note,
+.content .course-info-card dt,
+.content .course-info-card dd,
+.content .course-note-card p,
+.content .course-empty-copy {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.content .course-todo-card .todo-content strong {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.content .course-todo-card .todo-content > span,
+.content .course-todo-card .todo-row time {
+  font-size: 12px;
+}
+
