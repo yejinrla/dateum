@@ -89,11 +89,6 @@ export default function HomePage({ dates, todos, visits, setActiveTab, setModal,
           {doneDates.slice(0, 3).map((date) => (
             <MemoryCard key={date.id} date={date} openCourse={openCourse} />
           ))}
-          <button className="new-memory-card" onClick={() => setModal("date")}>
-            <span><Plus size={22} /></span>
-            <strong>새로운 기록 남기기</strong>
-            <small>오늘의 데이트를 담아보세요</small>
-          </button>
         </div>
       </section>
     </>
