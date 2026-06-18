@@ -179,7 +179,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .memory-emoji { font-size: 52px; filter: drop-shadow(0 8px 11px rgba(80,50,40,.12)); transform: rotate(-4deg); }
 .polaroid-label { position: absolute; bottom: 10px; right: 12px; color: #705960; background: rgba(255,255,255,.8); padding: 5px 9px; font-size: 8px; transform: rotate(-3deg); }
 .tape { position: absolute; width: 48px; height: 13px; background: rgba(255,248,225,.65); top: 5px; left: 50%; transform: translateX(-50%) rotate(3deg); }
-.memory-copy { padding: 18px 18px 20px; }
+.memory-copy { padding: 22px 20px 26px; }
 .memory-copy time { color: #a49499; font-size: 8px; }
 .memory-copy h4 { margin: 8px 0 9px; font-size: 12px; }
 .memory-copy p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
