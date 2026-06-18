@@ -832,6 +832,13 @@ body {
   font: 400 18px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
 }
 
+.add-row-button {
+  min-height: 46px !important;
+  padding: 10px 18px !important;
+  background: #111 !important;
+  color: #fff !important;
+}
+
 .memory-grid {
   gap: 26px;
 }
