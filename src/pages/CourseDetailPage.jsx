@@ -47,23 +47,70 @@ const placeDetails = {
   },
 };
 
+const fallbackTimes = ["13:00", "15:00", "17:00", "19:00"];
+
+function getDetail(course, place, index) {
+  return (
+    course.customPlaceDetails?.[place] ||
+    placeDetails[place] || {
+      time: fallbackTimes[index] || "시간 미정",
+      duration: "약 1시간",
+      address: `${course.province || "서울특별시"} ${course.district} ${course.area}`,
+      category: "데이트 장소",
+      note: "둘만의 메모를 남겨보세요.",
+    }
+  );
+}
+
 export default function CourseDetailPage({
   course,
   todos,
   toggleTodo,
   onOpenPlaceModal,
   onEdit,
-  onRemovePlace,
+  onUpdateCourse,
   onBack,
 }) {
   const [editing, setEditing] = useState(false);
-  const fallbackTimes = ["13:00", "15:00", "17:00", "19:00"];
+  const [editData, setEditData] = useState([]);
+
   const areaKeyword = course.area?.replace(/[동구]$/, "") || "";
   const relatedTodos = todos.filter(
     (todo) =>
       todo.category?.includes(areaKeyword) ||
       course.title.includes(todo.category?.replace(" 데이트", "")),
   );
+
+  const handleEditToggle = () => {
+    if (!editing) {
+      setEditData(
+        course.places.map((place, index) => ({
+          name: place,
+          ...getDetail(course, place, index),
+        })),
+      );
+      setEditing(true);
+    } else {
+      onUpdateCourse(editData);
+      setEditing(false);
+    }
+  };
+
+  const updateItem = (index, field, value) => {
+    setEditData((prev) => prev.map((item, i) => (i === index ? { ...item, [field]: value } : item)));
+  };
+
+  const removeItem = (index) => {
+    setEditData((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleAddPlace = () => {
+    if (editing) {
+      onUpdateCourse(editData);
+      setEditing(false);
+    }
+    onOpenPlaceModal();
+  };
 
   return (
     <div className="course-detail-page">
@@ -96,54 +143,100 @@ export default function CourseDetailPage({
               <h2>오늘의 코스</h2>
             </div>
             <div className="detail-title-actions">
-              <strong>총 {course.places.length}곳</strong>
+              <strong>총 {editing ? editData.length : course.places.length}곳</strong>
               <button
                 className={`icon-button${editing ? " icon-button--active" : ""}`}
-                onClick={() => setEditing(!editing)}
+                onClick={handleEditToggle}
               >
                 <Pencil size={14} />
               </button>
             </div>
           </div>
+
           <div className="course-schedule">
-            {course.places.length ? course.places.map((place, index) => {
-              const detail = course.customPlaceDetails?.[place] || placeDetails[place] || {
-                time: fallbackTimes[index] || "시간 미정",
-                duration: "약 1시간",
-                address: `${course.province || "서울특별시"} ${course.district} ${course.area}`,
-                category: "데이트 장소",
-                note: "둘만의 메모를 남겨보세요.",
-              };
-              return (
-                <article className="schedule-item" key={place}>
-                  <div className="schedule-marker">
-                    <span>{index + 1}</span>
-                    <time className="schedule-time">{detail.time}</time>
-                  </div>
-                  <div className="schedule-place">
-                    <div className="schedule-place-top">
-                      <div>
-                        <span>{detail.category}</span>
-                        <h3>{place}</h3>
-                      </div>
-                      {editing ? (
-                        <button
-                          className="schedule-remove-btn"
-                          onClick={() => onRemovePlace(place)}
-                          aria-label={`${place} 삭제`}
-                        >
+            {editing ? (
+              <>
+                {editData.map((item, index) => (
+                  <article className="schedule-item" key={index}>
+                    <div className="schedule-marker">
+                      <span>{index + 1}</span>
+                      <input
+                        className="schedule-edit-input schedule-edit-time"
+                        value={item.time}
+                        onChange={(e) => updateItem(index, "time", e.target.value)}
+                      />
+                    </div>
+                    <div className="schedule-place">
+                      <div className="schedule-place-top">
+                        <div className="schedule-edit-title-col">
+                          <input
+                            className="schedule-edit-input schedule-edit-category"
+                            value={item.category}
+                            onChange={(e) => updateItem(index, "category", e.target.value)}
+                          />
+                          <input
+                            className="schedule-edit-input schedule-edit-name"
+                            value={item.name}
+                            onChange={(e) => updateItem(index, "name", e.target.value)}
+                          />
+                        </div>
+                        <button className="schedule-remove-btn" onClick={() => removeItem(index)}>
                           <X size={13} />
                         </button>
-                      ) : (
-                        <small><Clock3 size={13} /> {detail.duration}</small>
-                      )}
+                      </div>
+                      <div className="schedule-edit-addr-row">
+                        <MapPin size={13} />
+                        <input
+                          className="schedule-edit-input schedule-edit-address"
+                          value={item.address}
+                          onChange={(e) => updateItem(index, "address", e.target.value)}
+                        />
+                      </div>
+                      <div className="schedule-edit-dur-row">
+                        <Clock3 size={12} />
+                        <input
+                          className="schedule-edit-input schedule-edit-duration"
+                          value={item.duration}
+                          onChange={(e) => updateItem(index, "duration", e.target.value)}
+                        />
+                      </div>
+                      <textarea
+                        className="schedule-edit-input schedule-edit-note"
+                        value={item.note}
+                        onChange={(e) => updateItem(index, "note", e.target.value)}
+                        rows={2}
+                      />
                     </div>
-                    <p className="place-address"><MapPin size={14} /> {detail.address}</p>
-                    <p className="place-note">{detail.note}</p>
-                  </div>
-                </article>
-              );
-            }) : (
+                  </article>
+                ))}
+                <button className="schedule-add-btn" onClick={handleAddPlace}>
+                  <Plus size={15} /> 장소 추가
+                </button>
+              </>
+            ) : course.places.length ? (
+              course.places.map((place, index) => {
+                const detail = getDetail(course, place, index);
+                return (
+                  <article className="schedule-item" key={place}>
+                    <div className="schedule-marker">
+                      <span>{index + 1}</span>
+                      <time className="schedule-time">{detail.time}</time>
+                    </div>
+                    <div className="schedule-place">
+                      <div className="schedule-place-top">
+                        <div>
+                          <span>{detail.category}</span>
+                          <h3>{place}</h3>
+                        </div>
+                        <small><Clock3 size={13} /> {detail.duration}</small>
+                      </div>
+                      <p className="place-address"><MapPin size={14} /> {detail.address}</p>
+                      <p className="place-note">{detail.note}</p>
+                    </div>
+                  </article>
+                );
+              })
+            ) : (
               <div className="course-empty-route">
                 <MapPin size={28} />
                 <strong>아직 추가된 코스가 없어요</strong>

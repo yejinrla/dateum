@@ -982,6 +982,111 @@ body {
   stroke-width: 2;
 }
 
+.schedule-edit-input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #e8dede;
+  border-radius: 0;
+  outline: none;
+  font-family: inherit;
+  padding: 2px 0;
+  margin-bottom: 4px;
+  color: inherit;
+}
+
+.schedule-edit-input:focus {
+  border-bottom-color: #b05560;
+}
+
+.schedule-edit-time {
+  font-size: 9px;
+  font-weight: 600;
+  color: #8f8288;
+  text-align: center;
+  width: 46px;
+}
+
+.schedule-edit-category {
+  font-size: 9px;
+  color: #ac777b;
+}
+
+.schedule-edit-name {
+  font: 700 18px/1.2 "Gaegu", "Noto Sans KR", sans-serif;
+  color: #55424d;
+  margin-bottom: 6px;
+}
+
+.schedule-edit-title-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.schedule-edit-addr-row,
+.schedule-edit-dur-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #8c8186;
+  margin: 5px 0 2px;
+}
+
+.schedule-edit-addr-row svg,
+.schedule-edit-dur-row svg {
+  flex-shrink: 0;
+  stroke: #8c8186;
+}
+
+.schedule-edit-address,
+.schedule-edit-duration {
+  font-size: 9px;
+  color: #8c8186;
+}
+
+.schedule-edit-note {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1.5px solid #e8dede !important;
+  border-radius: 9px;
+  background: #faf7f5;
+  font-size: 9px;
+  color: #76696f;
+  line-height: 1.55;
+  resize: none;
+  margin-bottom: 0;
+  font-family: inherit;
+  outline: none;
+}
+
+.schedule-edit-note:focus {
+  border-color: #b05560 !important;
+}
+
+.schedule-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 11px 0;
+  margin-top: 8px;
+  border: 1.5px dashed #c9b8bb;
+  border-radius: 12px;
+  background: transparent;
+  color: #8c7a7e;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.schedule-add-btn:hover {
+  border-color: #b05560;
+  color: #b05560;
+}
+
 .schedule-item {
   grid-template-columns: 46px 1fr;
   gap: 12px;

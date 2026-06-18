@@ -25,7 +25,7 @@ import CourseDetailPage from "./pages/CourseDetailPage";
 
 const tabToPath = (tab) => (tab === "home" ? "/" : `/${tab}`);
 
-function CourseDetailRoute({ dates, todos, toggleTodo, setModal, onRemovePlace }) {
+function CourseDetailRoute({ dates, todos, toggleTodo, setModal, onUpdateCourse }) {
   const { courseId } = useParams();
   const navigate = useNavigate();
   const course = dates.find((date) => String(date.id) === courseId);
@@ -39,7 +39,7 @@ function CourseDetailRoute({ dates, todos, toggleTodo, setModal, onRemovePlace }
       toggleTodo={toggleTodo}
       onOpenPlaceModal={() => setModal({ type: "place", courseId: course.id })}
       onEdit={() => setModal({ type: "edit-date", courseId: course.id })}
-      onRemovePlace={(placeName) => onRemovePlace(course.id, placeName)}
+      onUpdateCourse={(editData) => onUpdateCourse(course.id, editData)}
       onBack={() => navigate(-1)}
     />
   );
@@ -128,17 +128,19 @@ function App() {
     }
   };
 
-  const removePlaceFromCourse = (courseId, placeName) => {
+  const updateCourseSchedule = (courseId, editData) => {
     setDates((current) =>
       current.map((date) => {
         if (date.id !== courseId) return date;
-        const places = date.places.filter((p) => p !== placeName);
-        const customPlaceDetails = { ...(date.customPlaceDetails || {}) };
-        delete customPlaceDetails[placeName];
+        const places = editData.map((item) => item.name);
+        const customPlaceDetails = {};
+        editData.forEach(({ name, ...detail }) => {
+          customPlaceDetails[name] = detail;
+        });
         return { ...date, places, customPlaceDetails };
       }),
     );
-    notify(`${placeName}을 코스에서 삭제했어요.`);
+    notify("코스를 수정했어요.");
   };
 
   const toggleTodo = (id) => {
@@ -185,7 +187,7 @@ function App() {
                   todos={todos}
                   toggleTodo={toggleTodo}
                   setModal={setModal}
-                  onRemovePlace={removePlaceFromCourse}
+                  onUpdateCourse={updateCourseSchedule}
                 />
               }
             />
