@@ -1925,3 +1925,126 @@ body {
   color: #fff;
 }
 
+.content .date-list {
+  gap: 26px;
+}
+
+.content .date-list-card {
+  display: block;
+  min-height: 0;
+  padding: 18px 18px 20px;
+  border: 2px solid #111 !important;
+  border-radius: 26px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.content .date-list-card:hover {
+  transform: none;
+}
+
+.content .date-icon {
+  display: none;
+}
+
+.content .date-list-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content .date-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 7px 10px;
+  color: #666;
+  font-size: 13px;
+}
+
+.content .date-meta .status {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #555;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.content .date-meta > span:not(.status) {
+  grid-column: 1 / -1;
+  color: #666;
+}
+
+.content .date-list-copy h3 {
+  order: 1;
+  margin: 14px 0 8px;
+  color: #111;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.content .date-meta {
+  order: 0;
+}
+
+.content .place-chips {
+  order: 2;
+  display: grid;
+  gap: 7px;
+}
+
+.content .place-chips span {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.content .place-chips span::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  color: #111;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.content .place-chips span:nth-child(1)::before { content: "1"; }
+.content .place-chips span:nth-child(2)::before { content: "2"; }
+.content .place-chips span:nth-child(3)::before { content: "3"; }
+.content .place-chips span:nth-child(4)::before { content: "4"; }
+.content .place-chips span:nth-child(5)::before { content: "5"; }
+
+.content .date-list-copy > p {
+  order: 3;
+  margin: 12px 0 0;
+  color: #666;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.content .date-detail-button {
+  margin-top: 14px;
+  padding: 0;
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+}
+
