@@ -166,34 +166,6 @@ function App() {
 
   return (
     <div className="app-shell">
-      <aside className="sidebar">
-        <Brand />
-        <div className="couple-pill">
-          <div className="avatar-stack">
-            <span className="avatar avatar-a">민</span>
-            <span className="avatar avatar-b">준</span>
-          </div>
-          <div>
-            <strong>민지 & 준호</strong>
-            <span>함께한 지 824일</span>
-          </div>
-        </div>
-        <nav className="side-nav">
-          {navItems.map((item) => (
-            <NavButton
-              key={item.id}
-              item={item}
-              active={activeTab === item.id}
-              onClick={() => navigateToTab(item.id)}
-            />
-          ))}
-        </nav>
-        <div className="side-quote">
-          <Heart size={18} fill="currentColor" />
-          <p>우리의 다음 장면도<br />함께 담아볼까요?</p>
-        </div>
-      </aside>
-
       <main className="main">
         <MobileHeader activeTab={activeTab} clock={clock} />
         <div className="content">
@@ -328,12 +300,7 @@ function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, op
         eyebrow="TUESDAY, JUNE 16"
         title={<>좋은 아침이에요, <em>민지님</em></>}
         description="둘이 함께 채워갈 오늘을 확인해보세요."
-        action={
-          <button className="icon-button desktop-only" aria-label="알림">
-            <Bell size={21} />
-            <span className="notification-dot" />
-          </button>
-        }
+        action={null}
       />
 
       <section className="hero-card">
@@ -476,7 +443,7 @@ function DatesPage({ dates, setModal, openCourse }) {
         eyebrow="OUR DATE LOG"
         title={<>우리의 <em>데이트</em></>}
         description="가고 싶은 곳부터 오래 남길 장면까지 한곳에 담아요."
-        action={<button className="primary-button" onClick={() => setModal("date")}><Plus size={18} /> 기록 추가</button>}
+        action={<button className="icon-button" onClick={() => setModal("date")}><Plus size={20} /></button>}
       />
       <div className="filter-tabs">
         {[
