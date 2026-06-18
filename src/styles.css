@@ -1257,10 +1257,18 @@ body {
   font: 400 11px/1 "Gaegu", "Noto Sans KR", sans-serif;
 }
 
+.mobile-nav .sketch-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
 .mobile-nav button svg {
   width: 20px;
   height: 20px;
   stroke-width: 1.8;
+  filter: url(#sketch-wobble);
 }
 
 .mobile-nav button.active {
