@@ -1732,6 +1732,10 @@ body {
   font-size: 12px;
 }
 
+.todo-row time {
+  align-self: flex-start;
+}
+
 .content .dashboard-grid .add-row-button,
 .content .dashboard-grid .inline-link {
   font-size: 14px;
