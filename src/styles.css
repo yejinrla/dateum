@@ -938,8 +938,8 @@ body {
   padding: 8px 16px;
   border: 2px solid #111;
   border-radius: 26px;
-  background: #fff;
-  color: #111;
+  background: #111;
+  color: #fff;
   font: 400 16px/1 "Gaegu", "Noto Sans KR", sans-serif;
 }
 
