@@ -3047,6 +3047,10 @@ body {
   color: #111;
 }
 
+.content .hero-card .hero-copy h2 {
+  margin-bottom: 4px;
+}
+
 .content > .memories-section .memory-card {
   display: block;
   grid-template-columns: 1fr;
