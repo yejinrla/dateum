@@ -389,15 +389,6 @@ function HomePage({ dates, todos, visits, setActiveTab, setModal, toggleTodo, op
           </button>
         </section>
 
-        <button className="card footprint-preview" onClick={() => setActiveTab("footprints")}>
-          <div className="footprint-copy">
-            <span className="soft-label"><MapPin size={14} /> OUR FOOTPRINTS</span>
-            <h3>서울 {25}개 구 중<br /><strong>{visitedCount}개 구</strong>를 함께 다녀왔어요</h3>
-            <p>다음엔 아직 가보지 않은 동네로 떠나볼까요?</p>
-            <span className="inline-link">발자국 지도 보기 <ChevronRight size={16} /></span>
-          </div>
-          <MiniDistrictCloud visits={visits} />
-        </button>
       </div>
 
       <section className="memories-section">
